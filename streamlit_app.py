@@ -32,6 +32,7 @@ today = date.today()
 
 #Variable Names
 datex = "w22"
+lastupdated = "01-01-2022 05:00 PM"
 
 #Program Variables
 header = st.container()
@@ -57,7 +58,7 @@ if (sidebarContent == "Semester Exam Report"):
         st.image('ljulogo.png', use_column_width=True)
         st.markdown("<h1 style='text-align: center'><b>Semester Exam Report</b></h1>", unsafe_allow_html=True)
         st.markdown("<h1 style='text-align: center'><b>LJ Polytehnic</b></h1>", unsafe_allow_html=True)
-        st.write("Last Updated On: " + datex + "-2022")
+        st.write("Last Updated On: " + lastupdated )
         st.write("#####")
 
     with(login):
@@ -152,7 +153,8 @@ if submit:
         CGPA=str(df["CGPA"][tindex]),
         Status=str(df["Status"][tindex]),
         CurrentBacklog=str(df["CurrentBacklog"][tindex]),
-        TotalBacklog=str(df["TotalBacklog"][tindex]),       
+        TotalBacklog=str(df["TotalBacklog"][tindex]),
+        DeclaredOn=str(df["DeclaredOn"][tindex]),       
     )
 
     pdf = pdfkit.from_string(html, False)
