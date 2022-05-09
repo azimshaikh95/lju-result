@@ -127,7 +127,7 @@ submit = form.form_submit_button("Generate PDF")
     
     
     # generate html with base64 encoded string of image
-html_string = jinja_template.render(
+html_string = jinja2_template.render(
     img_string=image_file_path_to_base64_string('ljulogo.png'))
 
 # generate pdf
