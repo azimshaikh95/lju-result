@@ -129,14 +129,7 @@ template = env.get_template("template.html")
 
 left.write("Fill in the data:")
 form = left.form("template_form")
-student = form.text_input("StudentName")
-studen2t = form.text_input("StudentName33")
-course = form.selectbox(
-    "Choose course",
-    ["Report Generation in Streamlit", "Advanced Cryptography"],
-    index=0,
-)
-grade = form.slider("Grade", 1, 100, 60)
+
 submit = form.form_submit_button("Generate PDF")
 
 if submit:
