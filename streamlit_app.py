@@ -90,7 +90,9 @@ if (sidebarContent == "Semester Exam Report"):
     with(owners):
         st.write("####")
         st.markdown('<body class= "last" >Developed & Managed By: <a href="https://in.linkedin.com/in/mohammedazim-shaikh">MohammedAzim Shaikh</a></body>', unsafe_allow_html=True)
-        #st.write("Developed & Managed By : MohammedAzim Shaikh")
+        st.write("...")
+        
+        
 
 
 
