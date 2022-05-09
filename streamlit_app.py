@@ -113,9 +113,10 @@ with col4:
     st.write( str(df["Mark_1_OA"][tindex]) )
     
     
-df = pd.DataFrame(
-    np.random.randn(10, 5),
-    columns=('col %d' % i for i in range(5)))
+df = pd.DataFrame({
+     'first column': [1, 2, 3, 4],
+     'second column': [10, 20, 30, 40],
+ })
 
 st.table(df)
     
