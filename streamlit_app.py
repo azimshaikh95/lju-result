@@ -92,7 +92,7 @@ if (sidebarContent == "Semester Exam Report"):
         st.markdown('<body class= "last" >Developed & Managed By: <a href="https://in.linkedin.com/in/mohammedazim-shaikh">MohammedAzim Shaikh</a></body>', unsafe_allow_html=True)
         st.write("...")
         
-col1, col2, col3 = st.columns(3)
+col1, col2, col3 = st.columns([3, 1, 1])
 
 with col1:
     st.header("A cat")
