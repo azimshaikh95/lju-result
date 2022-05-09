@@ -130,7 +130,7 @@ template = env.get_template("template.html")
 
 
 left.write("Fill in the data:")
-form = left.form("template_form")
+#form = left.form("template_form")
 student = form.text_input("StudentName")
 course = form.selectbox(
     "Choose course",
