@@ -140,6 +140,16 @@ course = form.selectbox(
 grade = form.slider("Grade", 1, 100, 60)
 submit = form.form_submit_button("Generate PDF")
 
+form = left.form("template_form")
+student = form.text_input("StudentName")
+course = form.selectbox(
+    "Choose course",
+    ["Report Generation in Streamlit", "Advanced Cryptography"],
+    index=0,
+)
+grade = form.slider("Grade", 1, 100, 60)
+submit = form.form_submit_button("Generate PDF")
+
 if submit:
     html = template.render(
         Institution=str(df["Institution"][tindex]),
