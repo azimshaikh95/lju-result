@@ -156,6 +156,6 @@ if submit:
     right.download_button(
         "⬇️ Download PDF",
         data=pdf,
-        file_name=str(df["EnrolmentNo"][tindex]) + str(df["ExamName"][tindex]) + ".pdf",
+        file_name=str(df["EnrolmentNo"][tindex]) + "-" + str(df["ExamName"][tindex]) + ".pdf",
         mime="application/octet-stream",
     )
