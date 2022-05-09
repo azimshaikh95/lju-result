@@ -130,9 +130,9 @@ template = env.get_template("template.html")
 left.write("Fill in the data:")
 #form = left.form("template_form")
 
-#submit = form.form_submit_button("Generate PDF")
+submit = form.form_submit_button("Generate PDF")
 
-#if submit:
+if submit:
     html = template.render(
         Institution=str(df["Institution"][tindex]),
         ExamName=str(df["ExamName"][tindex]),
