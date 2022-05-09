@@ -107,67 +107,9 @@ with col3:
     st.write("**Practical Grade**")
     st.write((str(df["Mark_1_PR"][tindex]))
     
-#with col4:
- #   st.write("**Overall Grade**")
-  #  st.write((str(df["Mark_1_OA"][tindex]))
+with col4:
+    st.write("**Overall Grade**")
+    st.write((str(df["Mark_1_OA"][tindex]))
 
 
 
-
-########################################
-
-st.write("  \n  This app shows you how you can use Streamlit to make a PDF generator app in just a few lines of code!")
-
-left, right = st.columns(2)
-
-right.write("Here's the template we'll be using:")
-
-right.image("ljulogo.png", width=300)
-
-env = Environment(loader=FileSystemLoader("."), autoescape=select_autoescape())
-template = env.get_template("template.html")
-
-
-left.write("Fill in the data:")
-form = left.form("template_info")
-
-submit = form.form_submit_button("Generate PDF")
-
-if submit:
-    html = template.render(
-        Institution=str(df["Institution"][tindex]),
-        ExamName=str(df["ExamName"][tindex]),
-        ExamMonthYear=str(df["ExamMonthYear"][tindex]),
-        Semester=str(df["Semester"][tindex]),
-        SeatNo=str(df["SeatNo"][tindex]),
-        EnrolmentNo=str(df["EnrolmentNo"][tindex]),
-        StudentName=str(df["StudentName"][tindex]),
-        ProgramCode=str(df["ProgramCode"][tindex]),
-        BranchCode=str(df["BranchCode"][tindex]),
-        Sub1=str(df["Sub1"][tindex]),
-        Mark_1_TH=str(df["Mark_1_TH"][tindex]),
-        Mark_1_PR=str(df["Mark_1_PR"][tindex]),
-        Mark_1_OA=str(df["Mark_1_OA"][tindex]),
-        SPI=str(df["SPI"][tindex]),
-        CPI=str(df["CPI"][tindex]),
-        CGPA=str(df["CGPA"][tindex]),
-        Status=str(df["Status"][tindex]),
-        CurrentBacklog=str(df["CurrentBacklog"][tindex]),
-        TotalBacklog=str(df["TotalBacklog"][tindex]),
-        DeclaredOn=str(df["DeclaredOn"][tindex]),       
-    )
-
-    pdf = pdfkit.from_string(html, False)
-    st.balloons()
-       
-  
-
-    right.success("🎉 Your diploma was generated!")
-     #st.write(html, unsafe_allow_html=True)
-     #st.write("")
-    right.download_button(
-        "⬇️ Download PDF",
-        data=pdf,
-        file_name=str(df["EnrolmentNo"][tindex]) + "-" + str(df["ExamName"][tindex]) + ".pdf",
-        mime="application/octet-stream",
-    )
