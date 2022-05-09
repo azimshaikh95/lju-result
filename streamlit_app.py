@@ -44,6 +44,7 @@ owners = st.container()
 data = pd.read_csv("data/" + datex + ".csv",encoding='utf-8')
 df = pd.DataFrame(data)
 
+
 for i in range(len(df["EnrolmentNo"])):
     df['EnrolmentNo'][i] = df['EnrolmentNo'][i].lower()
 
@@ -97,7 +98,7 @@ col1, col2, col3, col4 = st.columns([3, 1, 1, 1])
 
 with col1:
     st.write("**Subject Code and Name**")
-    st.write("11")
+    st.write( str(df["Sub1"][tindex]) )
 
 with col2:
     st.write("**Theory Grade**")
@@ -109,14 +110,9 @@ with col3:
     
 with col4:
     st.write("**Overall Grade**")
-    st.write("a")
+    st.write("")
     
-    
-st.write(1234)
-st.write(pd.DataFrame({
-     'Subject Code and Name': ["**CPI:** " + str(df["CPI"][tindex]), 2, 3, 4],
-     'Theory Grade': [10, 20, 30, 40],
- }))
+
 
 
 ########################################
