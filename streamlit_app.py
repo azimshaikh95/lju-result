@@ -114,8 +114,8 @@ with col4:
     
 st.write(1234)
 st.write(pd.DataFrame({
-     'Subject Code and Name': [1, 2, 3, 4],
-     '**Theory Grade**': [10, 20, 30, 40],
+     'Subject Code and Name': ["**CPI:** " + str(df["CPI"][tindex]), 2, 3, 4],
+     'Theory Grade': [10, 20, 30, 40],
  }))
 
 
