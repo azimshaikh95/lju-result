@@ -139,6 +139,7 @@ pdfkit.from_string(html_string, false)
     right.download_button(
         "⬇️ Download PDF",
         data=pdf,
-        file_name=str(df["Sub1"][tindex])+".pdf",
+        file_name="aaa.pdf"
+        #file_name=str(df["Sub1"][tindex])+".pdf",
         mime="application/octet-stream",
     )
