@@ -142,16 +142,12 @@ if submit:
         CGPA=str(df["CGPA"][tindex]),
         Status=str(df["Status"][tindex]),
         CurrentBacklog=str(df["CurrentBacklog"][tindex]),
-        TotalBacklog=str(df["TotalBacklog"][tindex]),
-        #img_string=get_image_file_as_base64_data('ljulogo.png')),
+        TotalBacklog=str(df["TotalBacklog"][tindex]),       
     )
-
 
     pdf = pdfkit.from_string(html, False)
     st.balloons()
-    
-    
-    
+       
   
 
     right.success("🎉 Your diploma was generated!")
