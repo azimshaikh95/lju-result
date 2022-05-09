@@ -1,3 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#lju {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#lju td, #lju th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#lju tr:nth-child(even){background-color: #f2f2f2;}
+
+#lju tr:hover {background-color: #ddd;}
+
+#lju th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<h1>A Fancy Table</h1>
+
+
 <!--div style="width:800px; height:600px; padding:20px; text-align:center; border: 10px solid #787878">
 <div style="width:750px; height:550px; padding:20px; text-align:center; border: 5px solid #787878">
        <span style="font-size:50px; font-weight:bold">Certificate of Completion</span>
@@ -14,42 +47,42 @@
 </div-->
 
 
-<table border=3>
+<table id="lju">
 	<tbody>
 		<tr>
-			<td>Institution:</td>
+			<th>Institution:</td>
 			<td>{{ Institution }}</td>
 		</tr>
 		<tr>
-			<td>ExamName:</td>
+			<th>ExamName:</td>
 			<td>{{ ExamName }}</td>
 		</tr>
 		<tr>
-			<td>ExamMonthYear:</td>
+			<th>ExamMonthYear:</td>
 			<td>{{ ExamMonthYear }}</td>
 		</tr>
 		<tr>
-			<td>Semester:</td>
+			<th>Semester:</td>
 			<td>{{ Semester }}</td>
 		</tr>
 		<tr>
-			<td>Seat No:</td>
+			<th>Seat No:</td>
 			<td>{{ SeatNo }}</td>
 		</tr>
 		<tr>
-			<td>Enrolment No:</td>
+			<th>Enrolment No:</td>
 			<td>{{ EnrolmentNo }}</td>
 		</tr>
 		<tr>
-			<td>Student Name:</td>
+			<th>Student Name:</td>
 			<td>{{ StudentName }}</td>
 		</tr>
 		<tr>
-			<td>Program Code &amp; Name:</td>
+			<th>Program Code &amp; Name:</td>
 			<td>{{ ProgramCode }}</td>
 		</tr>
 		<tr>
-			<td>Branch Code &amp; Name:</td>
+			<th>Branch Code &amp; Name:</td>
 			<td>{{ BranchCode }}</td>
 		</tr>
 		<tr>
@@ -58,11 +91,11 @@
 		</tr>
 	</tbody>
 </table>
-<!-- DivTable.com -->
+
 
 &nbsp;
 
-<table border=3>
+<table id="lju">
 <tbody >
 <tr >
 <td>Subject Code and Name</td>
@@ -86,3 +119,5 @@
 </tbody>
 </table>
 
+</body>
+</html>
