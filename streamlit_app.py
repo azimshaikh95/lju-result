@@ -54,7 +54,7 @@ sidebarContent = st.sidebar.radio("Menu", ["Semester Exam Report", "Milestone Le
 #SER
 if (sidebarContent == "Semester Exam Report"):
     with(header):
-        st.image('images/ljulogo.png', use_column_width=True)
+        st.image('ljulogo.png', use_column_width=True)
         st.markdown("<h1 style='text-align: center'><b>Semester Exam Report</b></h1>", unsafe_allow_html=True)
         st.markdown("<h1 style='text-align: center'><b>LJ Polytehnic</b></h1>", unsafe_allow_html=True)
         st.write("Last Updated On: " + datex + "-2022")
