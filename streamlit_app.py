@@ -151,7 +151,7 @@ if submit:
   
 
     right.success("🎉 Your diploma was generated!")
-     st.write(html, unsafe_allow_html=True)
+     #st.write(html, unsafe_allow_html=True)
      st.write("")
     right.download_button(
         "⬇️ Download PDF",
