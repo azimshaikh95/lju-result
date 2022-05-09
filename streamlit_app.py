@@ -107,9 +107,9 @@ with col3:
     st.write("**Practical Grade**")
     st.write((str(df["Mark_1_PR"][tindex]))
     
-with col4:
-    st.write("**Overall Grade**")
-    st.write((str(df["Mark_1_OA"][tindex]))
+#with col4:
+ #   st.write("**Overall Grade**")
+  #  st.write((str(df["Mark_1_OA"][tindex]))
 
 
 
