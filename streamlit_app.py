@@ -105,7 +105,7 @@ left, right = st.columns(2)
 
 right.write("Here's the template we'll be using:")
 
-right.image("ljulogo.png", width=300)
+right.image("template.png", width=300)
 
 env = Environment(loader=FileSystemLoader("."), autoescape=select_autoescape())
 template = env.get_template("template.html")
@@ -127,18 +127,20 @@ submit = form.form_submit_button("Generate PDF")
     
     
     # generate html with base64 encoded string of image
+    if submit:
 html_string = template.render(
     img_string=image_file_path_to_base64_string('ljulogo.png'))
 
 # generate pdf
 pdfkit.from_string(html_string, 'html.pdf')
 
-    #right.success("🎉 Your diploma was generated!")
-    # st.write(html, unsafe_allow_html=True)
-    # st.write("")
-    #right.download_button(
-    #    "⬇️ Download PDF",
-    #    data=pdf,
-    #    file_name=str(df["Sub1"][tindex])+".pdf",
-    #    mime="application/octet-stream",
-    #)
+    right.success("🎉 Your diploma was generated!")
+     st.write(html, unsafe_allow_html=True)
+     st.write("")
+    right.download_button(
+        "⬇️ Download PDF",
+        data=pdf,
+        file_name="aaa.pdf"
+        #file_name=str(df["Sub1"][tindex])+".pdf",
+        mime="application/octet-stream",
+    )
