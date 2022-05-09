@@ -9,9 +9,13 @@ import pandas as pd
 
 import base64
 
-def get_image_file_as_base64_data():
-    with open(FILEPATH, 'rb') as image_file:
-        return base64.b64encode(image_file.read())
+def image_file_path_to_base64_string(filepath: str) -> str:
+  '''
+  Takes a filepath and converts the image saved there to its base64 encoding,
+  then decodes that into a string.
+  '''
+  with open(filepath, 'rb') as f:
+    return base64.b64encode(f.read()).decode()
 
 
 st.set_page_config(layout="centered", page_icon="🎓", page_title="Diploma Generator")
