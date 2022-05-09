@@ -114,8 +114,9 @@ with col4:
     
     
 df = pd.DataFrame({
-     'first column': [1, 2, 3, str(df["Mark_1_OA"][tindex]) ],
-     'second column': [10, 20, 30, 40],
+     'first column': [1, 2, 3, 4, 5],
+     'second column': [10, 20, 30, 40, 50],
+     rows=('Subject %d' % i for i in range(5)))
  })
 
 st.table(df)
