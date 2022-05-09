@@ -54,7 +54,7 @@ sidebarContent = st.sidebar.radio("Menu", ["Semester Exam Report", "Milestone Le
 #SER
 if (sidebarContent == "Semester Exam Report"):
     with(header):
-        st.image('images/banner.png', use_column_width=True)
+        st.image('images/ljulogo.png', use_column_width=True)
         st.markdown("<h1 style='text-align: center'><b>Semester Exam Report</b></h1>", unsafe_allow_html=True)
         st.markdown("<h1 style='text-align: center'><b>LJ Polytehnic</b></h1>", unsafe_allow_html=True)
         st.write("Last Updated On: " + datex + "-2022")
@@ -105,7 +105,7 @@ left, right = st.columns(2)
 
 right.write("Here's the template we'll be using:")
 
-right.image("template.png", width=300)
+right.image("ljulogo.png", width=300)
 
 env = Environment(loader=FileSystemLoader("."), autoescape=select_autoescape())
 template = env.get_template("template.html")
