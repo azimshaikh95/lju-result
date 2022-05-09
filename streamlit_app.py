@@ -97,19 +97,19 @@ col1, col2, col3, col4 = st.columns([3, 1, 1, 1])
 
 with col1:
     st.write("**Subject Code and Name**")
-    st.image("https://static.streamlit.io/examples/cat.jpg")
+    st.write("**Subject 1:** " + str(df["Sub1"][tindex]))
 
 with col2:
     st.write("**Theory Grade**")
-    st.image("https://static.streamlit.io/examples/dog.jpg")
+    st.write(str(df["Mark_1_TH"][tindex]))
 
 with col3:
     st.write("**Practical Grade**")
-    st.image("https://static.streamlit.io/examples/owl.jpg")
+    st.write((str(df["Mark_1_PR"][tindex]))
     
 with col4:
     st.write("**Overall Grade**")
-    st.image("https://static.streamlit.io/examples/owl.jpg")
+    st.write((str(df["OA"][tindex]))
 
 
 
