@@ -136,9 +136,9 @@ pdfkit.from_string(html_string, 'html.pdf')
     #right.success("🎉 Your diploma was generated!")
     # st.write(html, unsafe_allow_html=True)
     # st.write("")
-    right.download_button(
-        "⬇️ Download PDF",
-        data=pdf,
-        #file_name=str(df["Sub1"][tindex])+".pdf",
-        mime="application/octet-stream",
-    )
+    #right.download_button(
+    #    "⬇️ Download PDF",
+    #    data=pdf,
+    #    file_name=str(df["Sub1"][tindex])+".pdf",
+    #    mime="application/octet-stream",
+    #)
