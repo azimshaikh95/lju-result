@@ -109,7 +109,7 @@ with col3:
     
 with col4:
     st.write("**Overall Grade**")
-    st.write("**SPI:** " + str(df["SPI"][tindex]))
+    st.write( + str(df["SPI"][tindex]))
 
 
 
