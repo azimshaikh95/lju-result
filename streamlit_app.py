@@ -112,11 +112,11 @@ with col4:
     st.write("a" + str(df["SPI"][tindex]))
     
     
-    st.write(pd.df({
+st.write(1234)
+st.write(pd.DataFrame({
      'first column': [1, 2, 3, 4],
      'second column': [10, 20, 30, 40],
-
-
+ }))
 
 
 ########################################
