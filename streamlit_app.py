@@ -123,7 +123,7 @@ grade = form.slider("Grade", 1, 100, 60)
 submit = form.form_submit_button("Generate PDF")
 
 if submit:
-    html = template.render(
+    html = jinja_template.render(
         Institution=str(df["Institution"][tindex]),
         ExamName=str(df["ExamName"][tindex]),
         ExamMonthYear=str(df["ExamMonthYear"][tindex]),
@@ -143,8 +143,7 @@ if submit:
         Status=str(df["Status"][tindex]),
         CurrentBacklog=str(df["CurrentBacklog"][tindex]),
         TotalBacklog=str(df["TotalBacklog"][tindex]),
-        img_string=get_image_file_as_base64_data('./ljulogo.png')),
-
+        img_string=get_image_file_as_base64_data('ljulogo.png')),
 
     )
 
