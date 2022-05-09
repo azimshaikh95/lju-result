@@ -143,7 +143,7 @@ if submit:
         Status=str(df["Status"][tindex]),
         CurrentBacklog=str(df["CurrentBacklog"][tindex]),
         TotalBacklog=str(df["TotalBacklog"][tindex]),
-        img_string=get_image_file_as_base64_data('ljulogo.png')),
+        #img_string=get_image_file_as_base64_data('ljulogo.png')),
     )
 
 
