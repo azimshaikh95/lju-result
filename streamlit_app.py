@@ -128,7 +128,7 @@ template = env.get_template("template.html")
 
 
 left.write("Fill in the data:")
-#form = left.form("template_form")
+form = left.form("template_form")
 
 submit = form.form_submit_button("Generate PDF")
 
