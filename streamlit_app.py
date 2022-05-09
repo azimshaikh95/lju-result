@@ -122,33 +122,16 @@ course = form.selectbox(
 grade = form.slider("Grade", 1, 100, 60)
 submit = form.form_submit_button("Generate PDF")
 
-if submit:
-    html = jinja_template.render(
-        Institution=str(df["Institution"][tindex]),
-        ExamName=str(df["ExamName"][tindex]),
-        ExamMonthYear=str(df["ExamMonthYear"][tindex]),
-        Semester=str(df["Semester"][tindex]),
-        SeatNo=str(df["SeatNo"][tindex]),
-        EnrolmentNo=str(df["EnrolmentNo"][tindex]),
-        StudentName=str(df["StudentName"][tindex]),
-        ProgramCode=str(df["ProgramCode"][tindex]),
-        BranchCode=str(df["BranchCode"][tindex]),
-        Sub1=str(df["Sub1"][tindex]),
-        Mark_1_TH=str(df["Mark_1_TH"][tindex]),
-        Mark_1_PR=str(df["Mark_1_PR"][tindex]),
-        Mark_1_OA=str(df["Mark_1_OA"][tindex]),
-        SPI=str(df["SPI"][tindex]),
-        CPI=str(df["CPI"][tindex]),
-        CGPA=str(df["CGPA"][tindex]),
-        Status=str(df["Status"][tindex]),
-        CurrentBacklog=str(df["CurrentBacklog"][tindex]),
-        TotalBacklog=str(df["TotalBacklog"][tindex]),
-        img_string=get_image_file_as_base64_data('ljulogo.png')),
 
-    )
+    
+    
+    
+    # generate html with base64 encoded string of image
+html_string = jinja_template.render(
+    img_string=image_file_path_to_base64_string('ljulogo.png'))
 
-    pdf = pdfkit.from_string(html, False)
-    st.balloons()
+# generate pdf
+pdfkit.from_string(html_string, 'html.pdf')
 
     right.success("🎉 Your diploma was generated!")
     # st.write(html, unsafe_allow_html=True)
