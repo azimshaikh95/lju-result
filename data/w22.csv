@@ -1,4 +1,4 @@
-Institution,ExamName,ExamMonthYear,Semester,SeatNo,Enrolment No,Student Name,ProgramCode,BranchCode,Sub1,Mark_1_TH,Mark_1_PR,Mark_1_OA,SPI,CPI,CGPA,Status,CurrentBacklog,TotalBacklog
+Institution,ExamName,ExamMonthYear,Semester,SeatNo,EnrolmentNo,StudentName,ProgramCode,BranchCode,Sub1,Mark_1_TH,Mark_1_PR,Mark_1_OA,SPI,CPI,CGPA,Status,CurrentBacklog,TotalBacklog
 LJP,Winter-2022,"Feb, 2022",1,W2125121001,W9001,Raj Koladiya,012 - Diploma Engineering ,512 - Mechanical Engineering (Automation and Robotics),1001 - BCE,AA,BB,AB,9.5,8.6,9.6,Pass,1,4
 LJIET,Summer-2022,"Feb, 2022",2,W2125121002,W9002,Patel Urmi,012 - Diploma Engineering ,512 - Mechanical Engineering (Automation and Robotics),1002 - CPE,CC,DD,BC,6.3,5.3,3.2,Fail,0,1
 LJIET,Summer-2023,"Feb, 2023",3,W2125121002,W9003,Patel Urmi,13 - Diploma Engineering ,513 - Mechanical Engineering (Automation and Robotics),1003 - CPE,CC,DD,BC,6.3,5.3,3.2,Fail,0,1

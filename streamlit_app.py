@@ -33,8 +33,8 @@ owners = st.container()
 data = pd.read_csv("data/" + datex + ".csv",encoding='utf-8')
 df = pd.DataFrame(data)
 
-for i in range(len(df["Enrolment No"])):
-    df['Enrolment No'][i] = df['Enrolment No'][i].lower()
+for i in range(len(df["EnrolmentNo"])):
+    df['EnrolmentNo'][i] = df['EnrolmentNo'][i].lower()
 
 
 #WebApp -- "LJ University Result"
@@ -51,16 +51,16 @@ if (sidebarContent == "Semester Exam Report"):
         st.write("#####")
 
     with(login):
-        textInput = st.text_input("Enter your Enrolment No").lower()
+        textInput = st.text_input("Enter your EnrolmentNo").lower()
 
         #Input Activity
         status = False
-        for i in df["Enrolment No"]:
+        for i in df["EnrolmentNo"]:
             if( i == textInput):
                 status = True
         if(textInput != "" and status):
-            tindex = df[df["Enrolment No"] == textInput].index[0] #Finding the index of the search Enrolment No
-            st.title("Welcome " + str(df["Student Name"][tindex]) +" !")
+            tindex = df[df["EnrolmentNo"] == textInput].index[0] #Finding the index of the search EnrolmentNo
+            st.title("Welcome " + str(df["StudentName"][tindex]) +" !")
 
             st.write("**Institution:** " + str(df["Institution"][tindex]))
             st.write("**Branch Code & Name:** " + str(df["BranchCode"][tindex]))
@@ -103,7 +103,7 @@ template = env.get_template("template.html")
 
 left.write("Fill in the data:")
 form = left.form("template_form")
-student = form.text_input("Student name")
+student = form.text_input("StudentName")
 course = form.selectbox(
     "Choose course",
     ["Report Generation in Streamlit", "Advanced Cryptography"],
@@ -119,8 +119,8 @@ if submit:
         ExamMonthYear=str(df["ExamMonthYear"][tindex]),
         Semester=str(df["Semester"][tindex]),
         SeatNo=str(df["SeatNo"][tindex]),
-        Enrolment No=str(df["Enrolment No"][tindex]),
-        Student Name=str(df["Student Name"][tindex]),
+        EnrolmentNo=str(df["EnrolmentNo"][tindex]),
+        StudentName=str(df["StudentName"][tindex]),
         ProgramCode=str(df["ProgramCode"][tindex]),
         BranchCode=str(df["BranchCode"][tindex]),
         Sub1=str(df["Sub1"][tindex]),
