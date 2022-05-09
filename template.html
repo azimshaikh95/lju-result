@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+#lju {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#lju td, #lju th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#lju tr:nth-child(even){background-color: #f2f2f2;}
+
+#lju tr:hover {background-color: #ddd;}
+
+#lju th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<!--h1>A Fancy Table</h1-->
+
+
+<!--div style="width:800px; height:600px; padding:20px; text-align:center; border: 10px solid #787878">
+<div style="width:750px; height:550px; padding:20px; text-align:center; border: 5px solid #787878">
+       <span style="font-size:50px; font-weight:bold">Certificate of Completion</span>
+       <br><br>
+       <span style="font-size:25px"><i>This is to certify that</i></span>
+       <br><br>
+       <span style="font-size:30px"><b>{{ student }}</b></span><br/><br/>
+       <span style="font-size:25px"><i>has completed the course</i></span> <br/><br/>
+       <span style="font-size:30px">{{ course }}</span> <br/><br/>
+       <span style="font-size:20px">with score of <b> {{ grade }}</b></span> <br/><br/><br/><br/>
+       <span style="font-size:25px"><i>dated</i></span><br>
+      {{ date }}
+</div>
+</div-->
+
+
+<table id="lju">
+	<tbody>
+		
+		<tr>
+			<th>Institution:</td>
+			<td>{{ Institution }}</td>
+		</tr>
+		<tr>
+			<th>ExamName:</td>
+			<td>{{ ExamName }}</td>
+		</tr>
+		<tr>
+			<th>ExamMonthYear:</td>
+			<td>{{ ExamMonthYear }}</td>
+		</tr>
+		<tr>
+			<th>Semester:</td>
+			<td>{{ Semester }}</td>
+		</tr>
+		<tr>
+			<th>Seat No:</td>
+			<td>{{ SeatNo }}</td>
+		</tr>
+		<tr>
+			<th>Enrolment No:</td>
+			<td>{{ EnrolmentNo }}</td>
+		</tr>
+		<tr>
+			<th>Student Name:</td>
+			<td>{{ StudentName }}</td>
+		</tr>
+		<tr>
+			<th>Program Code &amp; Name:</td>
+			<td>{{ ProgramCode }}</td>
+		</tr>
+		<tr>
+			<th>Branch Code &amp; Name:</td>
+			<td>{{ BranchCode }}</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+
+&nbsp;
+
+<table id="lju">
+<tbody >
+<tr >
+<td>Subject Code and Name</td>
+<td>Theory Grade</td>
+<td>Practical Grade</td>
+<td>Overall Grade</td>
+</tr>
+<tr>
+<td>{{ Sub1 }}</td>
+<td>{{ Mark_1_TH }}</td>
+<td>{{ Mark_1_PR }}</td>
+<td>{{ Mark_1_OA }}</td>
+</tr>
+<tr>
+<td>{{ SPI }}</td>
+<td>{{ CPI }}</td>
+<td>{{ CGPA }}</td>
+<td>{{ Status }}</td>
+</tr>
+
+</tbody>
+</table>
+
+</body>
+</html>
