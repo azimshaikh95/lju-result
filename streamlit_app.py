@@ -112,6 +112,13 @@ with col4:
     st.write("**Overall Grade**")
     st.write( str(df["Mark_1_OA"][tindex]) )
     
+    
+dfx = pd.DataFrame(
+    np.random.randn(10, 5),
+    columns=('col %d' % i for i in range(5)))
+
+st.table(dfx)
+    
 
 
 
