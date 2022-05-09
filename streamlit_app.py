@@ -105,7 +105,7 @@ left, right = st.columns(2)
 
 right.write("Here's the template we'll be using:")
 
-right.image("template.png", width=300)
+right.image("ljulogo.png", width=300)
 
 env = Environment(loader=FileSystemLoader("."), autoescape=select_autoescape())
 template = env.get_template("template.html")
@@ -127,7 +127,7 @@ submit = form.form_submit_button("Generate PDF")
     
     
     # generate html with base64 encoded string of image
-html_string = jinja_template.render(
+html_string = template.render(
     img_string=image_file_path_to_base64_string('ljulogo.png'))
 
 # generate pdf
