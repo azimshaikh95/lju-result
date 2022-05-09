@@ -97,19 +97,19 @@ col1, col2, col3, col4 = st.columns([3, 1, 1, 1])
 
 with col1:
     st.write("**Subject Code and Name**")
-    st.write("**Subject 1:** " + str(df["Sub1"][tindex]))
+    st.write("11")
 
 with col2:
     st.write("**Theory Grade**")
-    st.write(+ str(df["Mark_1_TH"][tindex])))
+    st.write("11")
 
 with col3:
     st.write("**Practical Grade**")
-    st.write((+ str(df["Mark_1_PR"][tindex])))
+    st.write("11")
     
 with col4:
     st.write("**Overall Grade**")
-    st.write(+ (str(df["Mark_1_OA"][tindex])))
+    st.write("11")
 
 
 
