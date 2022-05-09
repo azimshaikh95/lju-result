@@ -1,4 +1,4 @@
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/streamlit/example-app-pdf-report/main)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/azimshaikh95/lju-result/)
 
 # 🎓 Diploma PDF Generator
 
