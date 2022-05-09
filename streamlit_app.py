@@ -115,9 +115,7 @@ with col4:
 
 ########################################
 
-st.write(
-    "  \n  This app shows you how you can use Streamlit to make a PDF generator app in just a few lines of code!"
-)
+st.write("  \n  This app shows you how you can use Streamlit to make a PDF generator app in just a few lines of code!")
 
 left, right = st.columns(2)
 
@@ -132,16 +130,7 @@ template = env.get_template("template.html")
 left.write("Fill in the data:")
 form = left.form("template_form")
 student = form.text_input("StudentName")
-course = form.selectbox(
-    "Choose course",
-    ["Report Generation in Streamlit", "Advanced Cryptography"],
-    index=0,
-)
-grade = form.slider("Grade", 1, 100, 60)
-submit = form.form_submit_button("Generate PDF")
-
-form = left.form("template_form")
-student = form.text_input("StudentName")
+studen2t = form.text_input("StudentName33")
 course = form.selectbox(
     "Choose course",
     ["Report Generation in Streamlit", "Advanced Cryptography"],
