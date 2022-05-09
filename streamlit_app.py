@@ -102,15 +102,15 @@ with col1:
 
 with col2:
     st.write("**Theory Grade**")
-    st.write("11")
+    st.write( str(df["Mark_1_TH"][tindex]) )
 
 with col3:
     st.write("**Practical Grade**")
-    st.write("11")
+    st.write( str(df["Mark_1_PR"][tindex]) )
     
 with col4:
     st.write("**Overall Grade**")
-    st.write("")
+    st.write( str(df["Mark_1_OA"][tindex]) )
     
 
 
