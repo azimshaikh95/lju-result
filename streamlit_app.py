@@ -114,7 +114,7 @@ with col4:
     
     
 df = pd.DataFrame({
-     'first column': [1, 2, 3, 4],
+     'first column': [1, 2, 3, str(df["Mark_1_OA"][tindex])],
      'second column': [10, 20, 30, 40],
  })
 
