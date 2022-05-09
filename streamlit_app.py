@@ -98,7 +98,7 @@ right.write("Here's the template we'll be using:")
 right.image("template.png", width=300)
 
 env = Environment(loader=FileSystemLoader("."), autoescape=select_autoescape())
-template = env.get_template("template_x.html")
+template = env.get_template("template.html")
 
 
 left.write("Fill in the data:")
