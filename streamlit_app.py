@@ -110,6 +110,11 @@ with col3:
 with col4:
     st.write("**Overall Grade**")
     st.write("" + str(df["SPI"][tindex]))
+    
+    
+    st.write(pd.df({
+     'first column': [1, 2, 3, 4],
+     'second column': [10, 20, 30, 40],
 
 
 
