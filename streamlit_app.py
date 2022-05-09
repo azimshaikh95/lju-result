@@ -119,7 +119,7 @@ if submit:
         ExamMonthYear=str(df[ExamMonthYear][tindex]),
         Semester=str(df[Semester][tindex]),
         SeatNo=str(df[SeatNo][tindex]),
-        Enrolment No=str(df[Enrolment No][tindex]),
+       # Enrolment No=str(df[Enrolment No][tindex]),
         Student Name=str(df[Student Name][tindex]),
         ProgramCode=str(df[ProgramCode][tindex]),
         BranchCode=str(df[BranchCode][tindex]),
