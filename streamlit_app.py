@@ -1,5 +1,5 @@
 import pdfkit
-from jinja2 import Environment, PackageLoader, select_autoescape, FileSystemLoader
+from jinja2 import Environment, PackageLoader, select_autoescape, FileSystemLoader, Template
 from datetime import date
 import streamlit as st
 from streamlit.components.v1 import iframe
@@ -127,7 +127,7 @@ submit = form.form_submit_button("Generate PDF")
     
     
     # generate html with base64 encoded string of image
-html_string = jinja2_template.render(
+html_string = jinja_template.render(
     img_string=image_file_path_to_base64_string('ljulogo.png'))
 
 # generate pdf
