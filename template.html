@@ -30,38 +30,22 @@
 </head>
 <body>
 
-<!--h1>A Fancy Table</h1-->
 
-
-<!--div style="width:800px; height:600px; padding:20px; text-align:center; border: 10px solid #787878">
-<div style="width:750px; height:550px; padding:20px; text-align:center; border: 5px solid #787878">
-       <span style="font-size:50px; font-weight:bold">Certificate of Completion</span>
-       <br><br>
-       <span style="font-size:25px"><i>This is to certify that</i></span>
-       <br><br>
-       <span style="font-size:30px"><b>{{ student }}</b></span><br/><br/>
-       <span style="font-size:25px"><i>has completed the course</i></span> <br/><br/>
-       <span style="font-size:30px">{{ course }}</span> <br/><br/>
-       <span style="font-size:20px">with score of <b> {{ grade }}</b></span> <br/><br/><br/><br/>
-       <span style="font-size:25px"><i>dated</i></span><br>
-      {{ date }}
-</div>
-</div-->
 
 
 <table id="lju">
 	<tbody>
 		
 		<tr>
-			<th>Institution:</td>
-			<td>{{ Institution }}</td>
+			<th>Institute &amp; Name:</td>
+			<td>{{ InstituteCode }}</td>
 		</tr>
 		<tr>
-			<th>ExamName:</td>
+			<th>Exam Name:</td>
 			<td>{{ ExamName }}</td>
 		</tr>
 		<tr>
-			<th>ExamMonthYear:</td>
+			<th>Exam Month &amp; Year:</td>
 			<td>{{ ExamMonthYear }}</td>
 		</tr>
 		<tr>
@@ -88,10 +72,7 @@
 			<th>Branch Code &amp; Name:</td>
 			<td>{{ BranchCode }}</td>
 		</tr>
-		<tr>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-		</tr>
+		
 	</tbody>
 </table>
 
@@ -100,26 +81,129 @@
 
 <table id="lju">
 <tbody >
-<tr >
-<td>Subject Code and Name</td>
-<td>Theory Grade</td>
-<td>Practical Grade</td>
-<td>Overall Grade</td>
-</tr>
-<tr>
-<td>{{ Sub1 }}</td>
-<td>{{ Mark_1_TH }}</td>
-<td>{{ Mark_1_PR }}</td>
-<td>{{ Mark_1_OA }}</td>
-</tr>
-<tr>
-<td>{{ SPI }}</td>
-<td>{{ CPI }}</td>
-<td>{{ CGPA }}</td>
-<td>{{ Status }}</td>
-</tr>
+
+		<tr >
+			<td>Subject Code and Name</td>
+			<td>Theory Grade</td>
+			<td>Practical Grade</td>
+			<td>Overall Grade</td>
+		</tr>
+
+		<tr>
+			<td>{{ Sub1 }}</td>
+			<td>{{ Mark_1_TH }}</td>
+			<td>{{ Mark_1_PR }}</td>
+			<td>{{ Mark_1_OA }}</td>
+		</tr>
+
+		<tr>
+			<td>{{ Sub2 }}</td>
+			<td>{{ Mark_2_TH }}</td>
+			<td>{{ Mark_2_PR }}</td>
+			<td>{{ Mark_2_OA }}</td>
+		</tr>
+
+		<tr>
+			<td>{{ Sub3 }}</td>
+			<td>{{ Mark_3_TH }}</td>
+			<td>{{ Mark_3_PR }}</td>
+			<td>{{ Mark_3_OA }}</td>
+		</tr>
+
+		<tr>
+			<td>{{ Sub4 }}</td>
+			<td>{{ Mark_4_TH }}</td>
+			<td>{{ Mark_4_PR }}</td>
+			<td>{{ Mark_4_OA }}</td>
+		</tr>
+
+		<tr>
+			<td>{{ Sub5 }}</td>
+			<td>{{ Mark_5_TH }}</td>
+			<td>{{ Mark_5_PR }}</td>
+			<td>{{ Mark_5_OA }}</td>
+		</tr>
+
+		<tr>
+			<td>{{ Sub6 }}</td>
+			<td>{{ Mark_6_TH }}</td>
+			<td>{{ Mark_6_PR }}</td>
+			<td>{{ Mark_6_OA }}</td>
+		</tr>
+
+		<tr>
+			<td>{{ Sub7 }}</td>
+			<td>{{ Mark_7_TH }}</td>
+			<td>{{ Mark_7_PR }}</td>
+			<td>{{ Mark_7_OA }}</td>
+		</tr>
+
+		<tr>
+			<td>{{ Sub8 }}</td>
+			<td>{{ Mark_8_TH }}</td>
+			<td>{{ Mark_8_PR }}</td>
+			<td>{{ Mark_8_OA }}</td>
+		</tr>
+
+		<tr>
+			<td>{{ Sub9 }}</td>
+			<td>{{ Mark_9_TH }}</td>
+			<td>{{ Mark_9_PR }}</td>
+			<td>{{ Mark_9_OA }}</td>
+		</tr>
+
+		<tr>
+			<td>{{ Sub10 }}</td>
+			<td>{{ Mark_10_TH }}</td>
+			<td>{{ Mark_10_PR }}</td>
+			<td>{{ Mark_10_OA }}</td>
+		</tr>
+
+		<tr>
+			<td>{{ SPI }}</td>
+			<td>{{ CPI }}</td>
+			<td>{{ CGPA }}</td>
+			<td>{{ Status }}</td>
+		</tr>
 
 </tbody>
+</table>
+
+&nbsp;
+
+<table id="lju">
+	<tbody>
+		
+		<tr>
+			<th>SPI:</td>
+			<td>{{ SPI }}</td>
+		</tr>
+		<tr>
+			<th>CPI:</td>
+			<td>{{ CPI }}</td>
+		</tr>
+		<tr>
+			<th>CGPA:</td>
+			<td>{{ CGPA }}</td>
+		</tr>
+		<tr>
+			<th>Status:</td>
+			<td>{{ Status }}</td>
+		</tr>
+		<tr>
+			<th>CurrentBacklog:</td>
+			<td>{{ CurrentBacklog }}</td>
+		</tr>
+		<tr>
+			<th>TotalBacklog:</td>
+			<td>{{ TotalBacklog }}</td>
+		</tr>
+		<tr>
+			<th>DeclarationDate:</td>
+			<td>{{ DeclarationDate }}</td>
+		</tr>
+
+	</tbody>
 </table>
 
 </body>
