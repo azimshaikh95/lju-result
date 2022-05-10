@@ -74,7 +74,7 @@ if (sidebarContent == "Semester Exam Report"):
             tindex = df[df["EnrolmentNo"] == textInput].index[0] #Finding the index of the search EnrolmentNo
             st.title("Welcome " + str(df["StudentName"][tindex]) +" !")
 
-            st.write("**Institution:** " + str(df["Institution"][tindex]))
+            st.write("**Institution:** " + str(df["InstituteCode"][tindex]))
             st.write("**Branch Code & Name:** " + str(df["BranchCode"][tindex]))
             st.write("**Subject 1:** " + str(df["Sub1"][tindex]) + "-" + str(df["Mark_1_TH"][tindex]) + "-" + str(df["Mark_1_PR"][tindex]) + "-" + str(df["Mark_1_OA"][tindex]))
             
