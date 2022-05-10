@@ -18,8 +18,8 @@ def image_file_path_to_base64_string(filepath: str) -> str:
     return base64.b64encode(f.read()).decode()
 
 
-st.set_page_config(layout="centered", page_icon="🎓", page_title="Diploma Generator")
-st.title("🎓 Diploma PDF Generator")
+st.set_page_config(layout="centered", page_icon="🎓", page_title="LJ Result App")
+#st.title("🎓 LJ University Result App")
 
 ##############################################
 
@@ -32,6 +32,7 @@ today = date.today()
 
 #Variable Names
 datex = "w22"
+lastupdated = "01-01-2022 05:00 PM"
 
 #Program Variables
 header = st.container()
@@ -42,6 +43,7 @@ owners = st.container()
 #Reading the file
 data = pd.read_csv("data/" + datex + ".csv",encoding='utf-8')
 df = pd.DataFrame(data)
+
 
 for i in range(len(df["EnrolmentNo"])):
     df['EnrolmentNo'][i] = df['EnrolmentNo'][i].lower()
@@ -57,7 +59,7 @@ if (sidebarContent == "Semester Exam Report"):
         st.image('ljulogo.png', use_column_width=True)
         st.markdown("<h1 style='text-align: center'><b>Semester Exam Report</b></h1>", unsafe_allow_html=True)
         st.markdown("<h1 style='text-align: center'><b>LJ Polytehnic</b></h1>", unsafe_allow_html=True)
-        st.write("Last Updated On: " + datex + "-2022")
+        st.write("Last Updated On: " + lastupdated )
         st.write("#####")
 
     with(login):
@@ -90,16 +92,34 @@ if (sidebarContent == "Semester Exam Report"):
     with(owners):
         st.write("####")
         st.markdown('<body class= "last" >Developed & Managed By: <a href="https://in.linkedin.com/in/mohammedazim-shaikh">MohammedAzim Shaikh</a></body>', unsafe_allow_html=True)
-        #st.write("Developed & Managed By : MohammedAzim Shaikh")
+        st.write("...")
+        
+col1, col2, col3, col4 = st.columns([3, 1, 1, 1])
 
+with col1:
+    st.write("**Subject Code and Name**")
+    st.write( str(df["Sub1"][tindex]) )
+
+with col2:
+    st.write("**Theory Grade**")
+    st.write( str(df["Mark_1_TH"][tindex]) )
+
+with col3:
+    st.write("**Practical Grade**")
+    st.write( str(df["Mark_1_PR"][tindex]) )
+    
+with col4:
+    st.write("**Overall Grade**")
+    st.write( str(df["Mark_1_OA"][tindex]) )
+    
+    
+  
 
 
 
 ########################################
 
-st.write(
-    "This app shows you how you can use Streamlit to make a PDF generator app in just a few lines of code!"
-)
+st.write("  \n  This app shows you how you can use Streamlit to make a PDF generator app in just a few lines of code!")
 
 left, right = st.columns(2)
 
@@ -112,14 +132,8 @@ template = env.get_template("template.html")
 
 
 left.write("Fill in the data:")
-form = left.form("template_form")
-student = form.text_input("StudentName")
-course = form.selectbox(
-    "Choose course",
-    ["Report Generation in Streamlit", "Advanced Cryptography"],
-    index=0,
-)
-grade = form.slider("Grade", 1, 100, 60)
+form = left.form("template_info")
+
 submit = form.form_submit_button("Generate PDF")
 
 if submit:
@@ -142,7 +156,8 @@ if submit:
         CGPA=str(df["CGPA"][tindex]),
         Status=str(df["Status"][tindex]),
         CurrentBacklog=str(df["CurrentBacklog"][tindex]),
-        TotalBacklog=str(df["TotalBacklog"][tindex]),       
+        TotalBacklog=str(df["TotalBacklog"][tindex]),
+        DeclaredOn=str(df["DeclaredOn"][tindex]),       
     )
 
     pdf = pdfkit.from_string(html, False)
