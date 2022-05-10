@@ -157,7 +157,7 @@ if submit:
         Status=str(df["Status"][tindex]),
         CurrentBacklog=str(df["CurrentBacklog"][tindex]),
         TotalBacklog=str(df["TotalBacklog"][tindex]),
-        DeclaredOn=str(df["DeclaredOn"][tindex]),       
+              
     )
 
     pdf = pdfkit.from_string(html, False)
