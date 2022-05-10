@@ -89,10 +89,7 @@ if (sidebarContent == "Semester Exam Report"):
         elif (textInput != "" and status == False):
             st.error("No Entry Found")
 
-    with(owners):
-        st.write("####")
-        st.markdown('<body class= "last" >Developed & Managed By: <a href="https://in.linkedin.com/in/mohammedazim-shaikh">MohammedAzim Shaikh</a></body>', unsafe_allow_html=True)
-        st.write("...")
+ 
         
 col1, col2, col3, col4 = st.columns([3, 1, 1, 1])
 
@@ -210,3 +207,8 @@ if submit:
         file_name=str(df["EnrolmentNo"][tindex]) + "-" + str(df["ExamName"][tindex]) + ".pdf",
         mime="application/octet-stream",
     )
+
+   with(owners):
+        st.write("####")
+        st.markdown('<body class= "last" >Developed & Managed By: <a href="https://in.linkedin.com/in/mohammedazim-shaikh">MohammedAzim Shaikh</a></body>', unsafe_allow_html=True)
+        st.write("...")
