@@ -72,7 +72,7 @@ if(textInput != "" and status):
     
     form = left.form("template_form")
     
-    left, right = form.columns(2)
+    left.form, right.form = st.columns(2)
     
     
     env = Environment(loader=FileSystemLoader("."), autoescape=select_autoescape())
