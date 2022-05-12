@@ -67,37 +67,37 @@ textInput = st.text_input("Enter your Enrolment No").lower()
 
 #Input Activity
 status = False
-# for i in df["EnrolmentNo"]:
-    # if( i == textInput):
-        # status = True
-if(textInput != "" and status):
-    tindex = df[df["EnrolmentNo"] == textInput].index[0] #Finding the index of the search EnrolmentNo
-    st.header("Welcome " + str(df["StudentName"][tindex]).title() +" !")
+i = ["EnrolmentNo"]:
+    if( i == textInput):
+        status = True
+    if(textInput != "" and status):
+        tindex = df[df["EnrolmentNo"] == textInput].index[0] #Finding the index of the search EnrolmentNo
+        st.header("Welcome " + str(df["StudentName"][tindex]).title() +" !")
 
-    # st.write("**Institution:** " + str(df["InstituteCode"][tindex]))
-    # st.write("**Branch Code & Name:** " + str(df["BranchCode"][tindex]))
-    # st.write("**Subject 1:** " + str(df["Sub1"][tindex]) + "-" + str(df["Mark_1_TH"][tindex]) + "-" + str(df["Mark_1_PR"][tindex]) + "-" + str(df["Mark_1_OA"][tindex]))
-    
-    # st.write("**SPI:** " + str(df["SPI"][tindex]))
-    # st.write("**CPI:** " + str(df["CPI"][tindex]))
-    # st.write("**CPI:** " + str(df["CPI"][tindex]))
+        # st.write("**Institution:** " + str(df["InstituteCode"][tindex]))
+        # st.write("**Branch Code & Name:** " + str(df["BranchCode"][tindex]))
+        # st.write("**Subject 1:** " + str(df["Sub1"][tindex]) + "-" + str(df["Mark_1_TH"][tindex]) + "-" + str(df["Mark_1_PR"][tindex]) + "-" + str(df["Mark_1_OA"][tindex]))
+        
+        # st.write("**SPI:** " + str(df["SPI"][tindex]))
+        # st.write("**CPI:** " + str(df["CPI"][tindex]))
+        # st.write("**CPI:** " + str(df["CPI"][tindex]))
 
-    # st.markdown("<hr>", unsafe_allow_html=True)
-    # st.markdown("<table><tr><td>" + str(df["InstituteCode"][tindex]) + "<td>2<td>3</tr></table>", unsafe_allow_html=True)
-    
-    st.markdown("<style>#lju {border-collapse: collapse;  width: 100%;}</style>", unsafe_allow_html=True)
-    
-    
-    st.markdown("<table id=lju><tbody><tr><th>Institute&amp;Name:</td><td>" + str(df["InstituteCode"][tindex]) + "</td></tr><tr><th>ExamName:</td><td>" + str(df["ExamName"][tindex]) + "</td></tr><tr><th>ExamMonth&amp;Year:</td><td>" + str(df["ExamMonthYear"][tindex]) + "</td></tr><tr><th>Semester:</td><td>" + str(df["Semester"][tindex]) + "</td></tr><tr><th>SeatNo:</td><td>" + str(df["SeatNo"][tindex]) + "</td></tr><tr><th>EnrolmentNo:</td><td>" + str(df["EnrolmentNo"][tindex]) + "</td></tr><tr><th>StudentName:</td><td>" + str(df["StudentName"][tindex]) + "</td></tr><tr><th>ProgramCode&amp;Name:</td><td>" + str(df["ProgramCode"][tindex]) + "</td></tr><tr><th>BranchCode&amp;Name:</td><td>" + str(df["BranchCode"][tindex]) + "</td></tr><tbody></table>&nbsp;&nbsp;", unsafe_allow_html=True)
-    
-    st.markdown("<table id=lju><tbody ><tr><th>Subject Code and Name</th><th>Theory Grade</th><th>Practical Grade</th><th>Overall Grade</th></tr><tr><td>" + str(df["Sub1"][tindex]) + "</td><td>" + str(df["Mark_1_TH"][tindex]) + "</td><td>" + str(df["Mark_1_PR"][tindex]) + "</td><td>" + str(df["Mark_1_OA"][tindex]) + "</td></tr><tr><td>" + str(df["Sub2"][tindex]) + "</td><td>" + str(df["Mark_2_TH"][tindex]) + "</td><td>" + str(df["Mark_2_PR"][tindex]) + "</td><td>" + str(df["Mark_2_OA"][tindex]) + "</td></tr><tr><td>" + str(df["Sub3"][tindex]) + "</td><td>" + str(df["Mark_3_TH"][tindex]) + "</td><td>" + str(df["Mark_3_PR"][tindex]) + "</td><td>" + str(df["Mark_3_OA"][tindex]) + "</td></tr><tr><td>" + str(df["Sub4"][tindex]) + "</td><td>" + str(df["Mark_4_TH"][tindex]) + "</td><td>" + str(df["Mark_4_PR"][tindex]) + "</td><td>" + str(df["Mark_4_OA"][tindex]) + "</td><tr><td>" + str(df["Sub5"][tindex]) + "</td><td>" + str(df["Mark_5_TH"][tindex]) + "</td><td>" + str(df["Mark_5_PR"][tindex]) + "</td><td>" + str(df["Mark_5_OA"][tindex]) + "</td></tr><tr><td>" + str(df["Sub6"][tindex]) + "</td><td>" + str(df["Mark_6_TH"][tindex]) + "</td><td>" + str(df["Mark_6_PR"][tindex]) + "</td><td>" + str(df["Mark_6_OA"][tindex]) + "</td></tr><tr><td>" + str(df["Sub7"][tindex]) + "</td><td>" + str(df["Mark_7_TH"][tindex]) + "</td><td>" + str(df["Mark_7_PR"][tindex]) + "</td><td>" + str(df["Mark_7_OA"][tindex]) + "</td></tr><tr><td>" + str(df["Sub8"][tindex]) + "</td><td>" + str(df["Mark_8_TH"][tindex]) + "</td><td>" + str(df["Mark_8_PR"][tindex]) + "</td><td>" + str(df["Mark_8_OA"][tindex]) + "</td></tr><tr><td>" + str(df["Sub9"][tindex]) + "</td><td>" + str(df["Mark_9_TH"][tindex]) + "</td><td>" + str(df["Mark_9_PR"][tindex]) + "</td><td>" + str(df["Mark_9_OA"][tindex]) + "</td></tr><tr><td>" + str(df["Sub10"][tindex]) + "</td><td>" + str(df["Mark_10_TH"][tindex]) + "</td><td>" + str(df["Mark_10_PR"][tindex]) + "</td><td>" + str(df["Mark_10_OA"][tindex]) + "</td></tr></tbody></table>&nbsp;&nbsp;",unsafe_allow_html=True)
-    
-    
-    st.markdown("<table id=lju><tbody><tr><td>SPI:</td><td>" + str(df["SPI"][tindex]) +" </td></tr><tr><td>CPI:</td><td>" + str(df["CPI"][tindex]) +"</td></tr><tr><td>CGPA:</td><td>" + str(df["CGPA"][tindex]) +"</td></tr><tr><td>Status:</td><td>" + str(df["Status"][tindex]) +"</td></tr><tr><td>Current Backlog:</td><td>" + str(df["CurrentBacklog"][tindex]) +"</td></tr><tr><td>Total Backlog:</td><td>" + str(df["TotalBacklog"][tindex]) +"</td></tr><tr><td>Declaration Date:</td><td>" + str(df["DeclarationDate"][tindex]) +"</td></tr></tbody></table>",unsafe_allow_html=True)
+        # st.markdown("<hr>", unsafe_allow_html=True)
+        # st.markdown("<table><tr><td>" + str(df["InstituteCode"][tindex]) + "<td>2<td>3</tr></table>", unsafe_allow_html=True)
+        
+        st.markdown("<style>#lju {border-collapse: collapse;  width: 100%;}</style>", unsafe_allow_html=True)
+        
+        
+        st.markdown("<table id=lju><tbody><tr><th>Institute&amp;Name:</td><td>" + str(df["InstituteCode"][tindex]) + "</td></tr><tr><th>ExamName:</td><td>" + str(df["ExamName"][tindex]) + "</td></tr><tr><th>ExamMonth&amp;Year:</td><td>" + str(df["ExamMonthYear"][tindex]) + "</td></tr><tr><th>Semester:</td><td>" + str(df["Semester"][tindex]) + "</td></tr><tr><th>SeatNo:</td><td>" + str(df["SeatNo"][tindex]) + "</td></tr><tr><th>EnrolmentNo:</td><td>" + str(df["EnrolmentNo"][tindex]) + "</td></tr><tr><th>StudentName:</td><td>" + str(df["StudentName"][tindex]) + "</td></tr><tr><th>ProgramCode&amp;Name:</td><td>" + str(df["ProgramCode"][tindex]) + "</td></tr><tr><th>BranchCode&amp;Name:</td><td>" + str(df["BranchCode"][tindex]) + "</td></tr><tbody></table>&nbsp;&nbsp;", unsafe_allow_html=True)
+        
+        st.markdown("<table id=lju><tbody ><tr><th>Subject Code and Name</th><th>Theory Grade</th><th>Practical Grade</th><th>Overall Grade</th></tr><tr><td>" + str(df["Sub1"][tindex]) + "</td><td>" + str(df["Mark_1_TH"][tindex]) + "</td><td>" + str(df["Mark_1_PR"][tindex]) + "</td><td>" + str(df["Mark_1_OA"][tindex]) + "</td></tr><tr><td>" + str(df["Sub2"][tindex]) + "</td><td>" + str(df["Mark_2_TH"][tindex]) + "</td><td>" + str(df["Mark_2_PR"][tindex]) + "</td><td>" + str(df["Mark_2_OA"][tindex]) + "</td></tr><tr><td>" + str(df["Sub3"][tindex]) + "</td><td>" + str(df["Mark_3_TH"][tindex]) + "</td><td>" + str(df["Mark_3_PR"][tindex]) + "</td><td>" + str(df["Mark_3_OA"][tindex]) + "</td></tr><tr><td>" + str(df["Sub4"][tindex]) + "</td><td>" + str(df["Mark_4_TH"][tindex]) + "</td><td>" + str(df["Mark_4_PR"][tindex]) + "</td><td>" + str(df["Mark_4_OA"][tindex]) + "</td><tr><td>" + str(df["Sub5"][tindex]) + "</td><td>" + str(df["Mark_5_TH"][tindex]) + "</td><td>" + str(df["Mark_5_PR"][tindex]) + "</td><td>" + str(df["Mark_5_OA"][tindex]) + "</td></tr><tr><td>" + str(df["Sub6"][tindex]) + "</td><td>" + str(df["Mark_6_TH"][tindex]) + "</td><td>" + str(df["Mark_6_PR"][tindex]) + "</td><td>" + str(df["Mark_6_OA"][tindex]) + "</td></tr><tr><td>" + str(df["Sub7"][tindex]) + "</td><td>" + str(df["Mark_7_TH"][tindex]) + "</td><td>" + str(df["Mark_7_PR"][tindex]) + "</td><td>" + str(df["Mark_7_OA"][tindex]) + "</td></tr><tr><td>" + str(df["Sub8"][tindex]) + "</td><td>" + str(df["Mark_8_TH"][tindex]) + "</td><td>" + str(df["Mark_8_PR"][tindex]) + "</td><td>" + str(df["Mark_8_OA"][tindex]) + "</td></tr><tr><td>" + str(df["Sub9"][tindex]) + "</td><td>" + str(df["Mark_9_TH"][tindex]) + "</td><td>" + str(df["Mark_9_PR"][tindex]) + "</td><td>" + str(df["Mark_9_OA"][tindex]) + "</td></tr><tr><td>" + str(df["Sub10"][tindex]) + "</td><td>" + str(df["Mark_10_TH"][tindex]) + "</td><td>" + str(df["Mark_10_PR"][tindex]) + "</td><td>" + str(df["Mark_10_OA"][tindex]) + "</td></tr></tbody></table>&nbsp;&nbsp;",unsafe_allow_html=True)
+        
+        
+        st.markdown("<table id=lju><tbody><tr><td>SPI:</td><td>" + str(df["SPI"][tindex]) +" </td></tr><tr><td>CPI:</td><td>" + str(df["CPI"][tindex]) +"</td></tr><tr><td>CGPA:</td><td>" + str(df["CGPA"][tindex]) +"</td></tr><tr><td>Status:</td><td>" + str(df["Status"][tindex]) +"</td></tr><tr><td>Current Backlog:</td><td>" + str(df["CurrentBacklog"][tindex]) +"</td></tr><tr><td>Total Backlog:</td><td>" + str(df["TotalBacklog"][tindex]) +"</td></tr><tr><td>Declaration Date:</td><td>" + str(df["DeclarationDate"][tindex]) +"</td></tr></tbody></table>",unsafe_allow_html=True)
 
-    
-elif (textInput != "" and status == False):
-    st.error("No Entry Found")
+        
+    elif (textInput != "" and status == False):
+        st.error("No Entry Found")
 
 with(owners):
     st.write("####")
