@@ -68,6 +68,9 @@ if(textInput != "" and status):
         submit = col1.button("Generate PDF")
         
     with col2:
+        pdf = pdfkit.from_string(html, False)
+        col2.balloons()
+           
         col2.success("🎉 Your Result PDF Generated!")                 
         col2.download_button(
             "⬇️ Download PDF",
@@ -75,8 +78,7 @@ if(textInput != "" and status):
             file_name=str(df["EnrolmentNo"][tindex].title()) + "-" + str(df["ExamName"][tindex].upper()) + ".pdf",
             mime="application/octet-stream",
         )
-    
-    
+        
     
     
     st.markdown("<table id=lju><tbody><tr><th>Institute&amp;Name:</td><td>" + str(df["InstituteCode"][tindex]) + "</td></tr><tr><th>ExamName:</td><td>" + str(df["ExamName"][tindex]) + "</td></tr><tr><th>ExamMonth&amp;Year:</td><td>" + str(df["ExamMonthYear"][tindex]) + "</td></tr><tr><th>Semester:</td><td>" + str(df["Semester"][tindex]) + "</td></tr><tr><th>SeatNo:</td><td>" + str(df["SeatNo"][tindex]) + "</td></tr><tr><th>EnrolmentNo:</td><td>" + str(df["EnrolmentNo"][tindex].title()) + "</td></tr><tr><th>StudentName:</td><td>" + str(df["StudentName"][tindex]) + "</td></tr><tr><th>ProgramCode&amp;Name:</td><td>" + str(df["ProgramCode"][tindex]) + "</td></tr><tr><th>BranchCode&amp;Name:</td><td>" + str(df["BranchCode"][tindex]) + "</td></tr><tbody></table>&nbsp;&nbsp;", unsafe_allow_html=True)
@@ -151,9 +153,7 @@ if(textInput != "" and status):
             DeclarationDate=str(df["DeclarationDate"][tindex]),              
         )
 
-        pdf = pdfkit.from_string(html, False)
-        st.balloons()
-           
+
       
 
         # st.success("🎉 Your Result PDF Generated!")                 
