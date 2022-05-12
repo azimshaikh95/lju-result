@@ -83,49 +83,7 @@ if (sidebarContent == "Semester Exam Report"):
             st.write("**CPI:** " + str(df["CPI"][tindex]))
 
             st.markdown("<hr>", unsafe_allow_html=True)
-            st.markdown("<table id="lju">
-	<tbody>
-		
-		<tr>
-			<th>Institute &amp; Name:</td>
-			<td>{{ InstituteCode }}</td>
-		</tr>
-		<tr>
-			<th>Exam Name:</td>
-			<td>{{ ExamName }}</td>
-		</tr>
-		<tr>
-			<th>Exam Month &amp; Year:</td>
-			<td>{{ ExamMonthYear }}</td>
-		</tr>
-		<tr>
-			<th>Semester:</td>
-			<td>{{ Semester }}</td>
-		</tr>
-		<tr>
-			<th>Seat No:</td>
-			<td>{{ SeatNo }}</td>
-		</tr>
-		<tr>
-			<th>Enrolment No:</td>
-			<td>{{ EnrolmentNo }}</td>
-		</tr>
-		<tr>
-			<th>Student Name:</td>
-			<td>{{ StudentName }}</td>
-		</tr>
-		<tr>
-			<th>Program Code &amp; Name:</td>
-			<td>{{ ProgramCode }}</td>
-		</tr>
-		<tr>
-			<th>Branch Code &amp; Name:</td>
-			<td>{{ BranchCode }}</td>
-		</tr>
-		
-	</tbody>
-</table>
-", unsafe_allow_html=True)
+            st.markdown("<table><tr><td>1<td>2<td>3</tr></table>", unsafe_allow_html=True)
 
             
         elif (textInput != "" and status == False):
