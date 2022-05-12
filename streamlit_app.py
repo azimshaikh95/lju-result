@@ -85,10 +85,10 @@ if (sidebarContent == "Semester Exam Report"):
             st.markdown("<hr>", unsafe_allow_html=True)
             # st.markdown("<table><tr><td>" + str(df["InstituteCode"][tindex]) + "<td>2<td>3</tr></table>", unsafe_allow_html=True)
             
-            st.markdown("#lju {  font-family: Arial, Helvetica, sans-serif;  border-collapse: collapse;  width: 100%;}", unsafe_allow_html=True)
+            st.markdown(", unsafe_allow_html=True)
             
             
-            st.markdown("<table id="lju"><tbody><tr><th>Institute&amp;Name:</td><td>" + str(df["InstituteCode"][tindex]) + "</td></tr><tr><th>ExamName:</td><td>" + str(df["ExamName"][tindex]) + "</td></tr><tr><th>ExamMonth&amp;Year:</td><td>" + str(df["ExamMonthYear"][tindex]) + "</td></tr><tr><th>Semester:</td><td>" + str(df["Semester"][tindex]) + "</td></tr><tr><th>SeatNo:</td><td>" + str(df["SeatNo"][tindex]) + "</td></tr><tr><th>EnrolmentNo:</td><td>" + str(df["EnrolmentNo"][tindex]) + "</td></tr><tr><th>StudentName:</td><td>" + str(df["StudentName"][tindex]) + "</td></tr><tr><th>ProgramCode&amp;Name:</td><td>" + str(df["ProgramCode"][tindex]) + "</td></tr><tr><th>BranchCode&amp;Name:</td><td>" + str(df["BranchCode"][tindex]) + "</td></tr><tbody></table>", unsafe_allow_html=True)
+            st.markdown("#lju {  font-family: Arial, Helvetica, sans-serif;  border-collapse: collapse;  width: 100%;} <table id="lju"><tbody><tr><th>Institute&amp;Name:</td><td>" + str(df["InstituteCode"][tindex]) + "</td></tr><tr><th>ExamName:</td><td>" + str(df["ExamName"][tindex]) + "</td></tr><tr><th>ExamMonth&amp;Year:</td><td>" + str(df["ExamMonthYear"][tindex]) + "</td></tr><tr><th>Semester:</td><td>" + str(df["Semester"][tindex]) + "</td></tr><tr><th>SeatNo:</td><td>" + str(df["SeatNo"][tindex]) + "</td></tr><tr><th>EnrolmentNo:</td><td>" + str(df["EnrolmentNo"][tindex]) + "</td></tr><tr><th>StudentName:</td><td>" + str(df["StudentName"][tindex]) + "</td></tr><tr><th>ProgramCode&amp;Name:</td><td>" + str(df["ProgramCode"][tindex]) + "</td></tr><tr><th>BranchCode&amp;Name:</td><td>" + str(df["BranchCode"][tindex]) + "</td></tr><tbody></table>", unsafe_allow_html=True)
 
             
         elif (textInput != "" and status == False):
