@@ -162,7 +162,7 @@ if (sidebarContent == "Semester Exam Report"):
                 st.download_button(
                     "⬇️ Download PDF",
                     data=pdf,
-                    file_name=str(df["EnrolmentNo"][tindex].title()) + "-" + str(df["ExamName"][tindex.upper()]) + ".pdf",
+                    file_name=str(df["EnrolmentNo"][tindex].title()) + "-" + str(df["ExamName"][tindex].upper()) + ".pdf",
                     mime="application/octet-stream",
                 )
 
