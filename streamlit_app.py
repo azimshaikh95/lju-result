@@ -93,23 +93,23 @@ if (sidebarContent == "Semester Exam Report"):
         st.markdown('<body class= "last" >Developed & Managed By: <a href="https://in.linkedin.com/in/mohammedazim-shaikh">MohammedAzim Shaikh</a></body>', unsafe_allow_html=True)
         st.write("...")
         
-col1, col2, col3, col4 = st.columns([3, 1, 1, 1])
+# col1, col2, col3, col4 = st.columns([3, 1, 1, 1])
 
-with col1:
-    st.write("**Subject Code and Name**")
-    st.write( str(df["Sub1"][tindex]) )
+# with col1:
+    # st.write("**Subject Code and Name**")
+    # st.write( str(df["Sub1"][tindex]) )
 
-with col2:
-    st.write("**Theory Grade**")
-    st.write( str(df["Mark_1_TH"][tindex]) )
+# with col2:
+    # st.write("**Theory Grade**")
+    # st.write( str(df["Mark_1_TH"][tindex]) )
 
-with col3:
-    st.write("**Practical Grade**")
-    st.write( str(df["Mark_1_PR"][tindex]) )
+# with col3:
+    # st.write("**Practical Grade**")
+    # st.write( str(df["Mark_1_PR"][tindex]) )
     
-with col4:
-    st.write("**Overall Grade**")
-    st.write( str(df["Mark_1_OA"][tindex]) )
+# with col4:
+    # st.write("**Overall Grade**")
+    # st.write( str(df["Mark_1_OA"][tindex]) )
     
     
   
