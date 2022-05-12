@@ -195,21 +195,7 @@ def style_button_row(clicked_button_ix, n_buttons):
     st.markdown(f"<style>{style}</style>", unsafe_allow_html=True)
     
     
-col1, col2, col3, col4 = st.sidebar.columns([1, 1, 1, 1])
-with col1:
-    st.button("📆", on_click=style_button_row, kwargs={
-        'clicked_button_ix': 1, 'n_buttons': 4
-    })
-with col2:
-    st.button("👌", on_click=style_button_row, kwargs={
-        'clicked_button_ix': 1, 'n_buttons': 4
-    })
-with col3:
-    st.button("◀", on_click=style_button_row, kwargs={
-       'clicked_button_ix': 1, 'n_buttons': 4
 
-    })
-with col4:
     st.button("🚧", on_click=style_button_row, kwargs={
-        'clicked_button_ix': 1, 'n_buttons': 4
+        'clicked_button_ix': 4, 'n_buttons': 4
     })
