@@ -45,8 +45,8 @@ data = pd.read_csv("data/" + datex + ".csv",encoding='utf-8')
 df = pd.DataFrame(data)
 
 
-# for i in range(len(df["EnrolmentNo"])):
-    # df['EnrolmentNo'][i] = df['EnrolmentNo'][i].lower()
+for i in range(len(df["EnrolmentNo"])):
+    df['EnrolmentNo'][i] = df['EnrolmentNo'][i].lower()
 
 
 #WebApp -- "LJ University Result"
@@ -55,21 +55,21 @@ df = pd.DataFrame(data)
 
 #SER
 # if (sidebarContent == "Semester Exam Report"):
-# with(header):
-    st.image('ljulogo.png', use_column_width=True)
-    st.markdown("<h1 style='text-align: center'><b>Semester Exam Report</b></h1>", unsafe_allow_html=True)
-    st.markdown("<h1 style='text-align: center'><b>LJ Polytehnic</b></h1>", unsafe_allow_html=True)
-    st.write("Last Updated On: " + lastupdated )
-    st.write("#####")
+    # with(header):
+        st.image('ljulogo.png', use_column_width=True)
+        st.markdown("<h1 style='text-align: center'><b>Semester Exam Report</b></h1>", unsafe_allow_html=True)
+        st.markdown("<h1 style='text-align: center'><b>LJ Polytehnic</b></h1>", unsafe_allow_html=True)
+        st.write("Last Updated On: " + lastupdated )
+        st.write("#####")
 
-# with(login):
-    textInput = st.text_input("Enter your Enrolment No").lower()
+    # with(login):
+        textInput = st.text_input("Enter your Enrolment No").lower()
 
-    #Input Activity
-    status = False
-    for i in df["EnrolmentNo"]:
-        if( i == textInput):
-            status = True
+        #Input Activity
+        status = False
+        for i in df["EnrolmentNo"]:
+            if( i == textInput):
+                status = True
         if(textInput != "" and status):
             tindex = df[df["EnrolmentNo"] == textInput].index[0] #Finding the index of the search EnrolmentNo
             st.header("Welcome " + str(df["StudentName"][tindex]).title() +" !")
@@ -104,7 +104,26 @@ df = pd.DataFrame(data)
         st.markdown('<body class= "last" >Developed & Managed By: <a href="https://in.linkedin.com/in/mohammedazim-shaikh">MohammedAzim Shaikh</a></body>', unsafe_allow_html=True)
         st.write("...")
         
+# col1, col2, col3, col4 = st.columns([3, 1, 1, 1])
 
+# with col1:
+    # st.write("**Subject Code and Name**")
+    # st.write( str(df["Sub1"][tindex]) )
+
+# with col2:
+    # st.write("**Theory Grade**")
+    # st.write( str(df["Mark_1_TH"][tindex]) )
+
+# with col3:
+    # st.write("**Practical Grade**")
+    # st.write( str(df["Mark_1_PR"][tindex]) )
+    
+# with col4:
+    # st.write("**Overall Grade**")
+    # st.write( str(df["Mark_1_OA"][tindex]) )
+    
+    
+  
 
 
 
