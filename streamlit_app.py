@@ -202,14 +202,14 @@ with col1:
     })
 with col2:
     st.button("👌", on_click=style_button_row, kwargs={
-        'clicked_button_ix': 2, 'n_buttons': 4
+        'clicked_button_ix': 1, 'n_buttons': 4
     })
 with col3:
     st.button("◀", on_click=style_button_row, kwargs={
-       'clicked_button_ix': 3, 'n_buttons': 4
+       'clicked_button_ix': 1, 'n_buttons': 4
 
     })
 with col4:
     st.button("🚧", on_click=style_button_row, kwargs={
-        'clicked_button_ix': 4, 'n_buttons': 4
+        'clicked_button_ix': 1, 'n_buttons': 4
     })
