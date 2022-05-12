@@ -83,7 +83,48 @@ if (sidebarContent == "Semester Exam Report"):
             st.write("**CPI:** " + str(df["CPI"][tindex]))
 
             st.markdown("<hr>", unsafe_allow_html=True)
-            st.markdown("<table><tr><td>1<td>2<td>3</tr></table>", unsafe_allow_html=True)
+            st.markdown("<table>
+                            <tbody>
+                                
+                                <tr>
+                                    <th>Institute &amp; Name:</td>
+                                    <td> str(df["InstituteCode"][tindex]) </td>
+                                </tr>
+                                <tr>
+                                    <th>Exam Name:</td>
+                                    <td> str(df["ExamName"][tindex]) </td>
+                                </tr>
+                                <tr>
+                                    <th>Exam Month &amp; Year:</td>
+                                    <td> str(df["ExamMonthYear"][tindex]) </td>			
+                                </tr>
+                                <tr>
+                                    <th>Semester:</td>
+                                    <td> str(df["Semester"][tindex]) </td>
+                                </tr>
+                                <tr>
+                                    <th>Seat No:</td>
+                                    <td> str(df["SeatNo"][tindex]) </td>			
+                                </tr>
+                                <tr>
+                                    <th>Enrolment No:</td>
+                                    <td> str(df["EnrolmentNo"][tindex]) </td>			
+                                </tr>
+                                <tr>
+                                    <th>Student Name:</td>
+                                    <td> str(df["StudentName"][tindex]) </td>			
+                                </tr>
+                                <tr>
+                                    <th>Program Code &amp; Name:</td>
+                                    <td> str(df["ProgramCode"][tindex]) </td>			
+                                </tr>
+                                <tr>
+                                    <th>Branch Code &amp; Name:</td>
+                                    <td> str(df["BranchCode"][tindex]) </td>		
+                                </tr>
+                                
+                            </tbody>
+                        </table>", unsafe_allow_html=True)
 
             
         elif (textInput != "" and status == False):
