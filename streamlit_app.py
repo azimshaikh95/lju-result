@@ -59,8 +59,7 @@ if (sidebarContent == "Semester Exam Report"):
         st.image('ljulogo.png', use_column_width=True)
         st.markdown("<h1 style='text-align: center'><b>Semester Exam Report</b></h1>", unsafe_allow_html=True)
         st.markdown("<h1 style='text-align: center'><b>LJ Polytehnic</b></h1>", unsafe_allow_html=True)
-        st.write("Last Updated On: " + lastupdated )
-        st.write("#####")
+                st.write("#####")
 
     with(login):
         textInput = st.text_input("Enter your Enrolment No").lower()
@@ -168,6 +167,7 @@ if (sidebarContent == "Semester Exam Report"):
     with(owners):
         st.write("####")
         st.markdown("Developed & Managed By: <a href="https://in.linkedin.com/in/mohammedazim-shaikh">MohammedAzim Shaikh</a>", unsafe_allow_html=True)
+        st.write("Last Updated On: " + lastupdated )
         
         
 
