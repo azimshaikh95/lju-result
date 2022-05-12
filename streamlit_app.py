@@ -156,3 +156,22 @@ elif (textInput != "" and status == False):
 st.write("####")
 st.markdown('<body class= "last" >Developed & Managed By: <a href="https://in.linkedin.com/in/mohammedazim-shaikh">MohammedAzim Shaikh</a></body>', unsafe_allow_html=True)
 st.write("Last Updated On: " + lastupdated )
+
+col1, col2, col3, col4 = st.sidebar.columns([1, 1, 1, 1])
+with col1:
+    st.button("📆", on_click=style_button_row, kwargs={
+        'clicked_button_ix': 1, 'n_buttons': 4
+    })
+with col2:
+    st.button("👌", on_click=style_button_row, kwargs={
+        'clicked_button_ix': 2, 'n_buttons': 4
+    })
+with col3:
+    st.button("◀", on_click=style_button_row, kwargs={
+       'clicked_button_ix': 3, 'n_buttons': 4
+
+    })
+with col4:
+    st.button("🚧", on_click=style_button_row, kwargs={
+        'clicked_button_ix': 4, 'n_buttons': 4
+    })
