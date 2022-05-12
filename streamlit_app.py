@@ -70,9 +70,9 @@ if(textInput != "" and status):
     
     st.markdown("<table id=lju><tbody><tr><td>SPI:</td><td>" + str(df["SPI"][tindex]) +" </td></tr><tr><td>CPI:</td><td>" + str(df["CPI"][tindex]) +"</td></tr><tr><td>CGPA:</td><td>" + str(df["CGPA"][tindex]) +"</td></tr><tr><td>Status:</td><td>" + str(df["Status"][tindex]) +"</td></tr><tr><td>Current Backlog:</td><td>" + str(df["CurrentBacklog"][tindex]) +"</td></tr><tr><td>Total Backlog:</td><td>" + str(df["TotalBacklog"][tindex]) +"</td></tr><tr><td>Declaration Date:</td><td>" + str(df["DeclarationDate"][tindex]) +"</td></tr></tbody></table>&nbsp;&nbsp;",unsafe_allow_html=True)
     
-    form = left.form("template_form")
     
-    left.form, right.form = st.columns(2)
+    
+left, right = st.columns(2)
     
     
     env = Environment(loader=FileSystemLoader("."), autoescape=select_autoescape())
