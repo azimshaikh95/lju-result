@@ -77,7 +77,7 @@ if(textInput != "" and status):
     template = env.get_template("template.html")
 
     left.write("Want to Save?")
-    submit = st.button("Generate PDF")
+    submit = left.button("Generate PDF")
 
     if submit:
         html = template.render(
