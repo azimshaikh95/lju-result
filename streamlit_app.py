@@ -62,85 +62,6 @@ if(textInput != "" and status):
     st.header("Welcome " + str(df["StudentName"][tindex]).title() +" !")            
     st.markdown("<style>#lju {border-collapse: collapse;  width: 100%;}</style>", unsafe_allow_html=True)
     
-    col1, col2 = st.columns(2)
-
-    with col1:
-        if submit:
-            html = template.render(
-                InstituteCode=str(df["InstituteCode"][tindex]),
-                ExamName=str(df["ExamName"][tindex]),
-                ExamMonthYear=str(df["ExamMonthYear"][tindex]),
-                Semester=str(df["Semester"][tindex]),
-                SeatNo=str(df["SeatNo"][tindex]),
-                EnrolmentNo=str(df["EnrolmentNo"][tindex].title()),
-                StudentName=str(df["StudentName"][tindex]),
-                ProgramCode=str(df["ProgramCode"][tindex]),
-                BranchCode=str(df["BranchCode"][tindex]),
-                Sub1=str(df["Sub1"][tindex]),
-                Mark_1_TH=str(df["Mark_1_TH"][tindex]),
-                Mark_1_PR=str(df["Mark_1_PR"][tindex]),
-                Mark_1_OA=str(df["Mark_1_OA"][tindex]),
-                Sub2=str(df["Sub2"][tindex]),
-                Mark_2_TH=str(df["Mark_2_TH"][tindex]),
-                Mark_2_PR=str(df["Mark_2_PR"][tindex]),
-                Mark_2_OA=str(df["Mark_2_OA"][tindex]),
-                Sub3=str(df["Sub3"][tindex]),
-                Mark_3_TH=str(df["Mark_3_TH"][tindex]),
-                Mark_3_PR=str(df["Mark_3_PR"][tindex]),
-                Mark_3_OA=str(df["Mark_3_OA"][tindex]),
-                Sub4=str(df["Sub4"][tindex]),
-                Mark_4_TH=str(df["Mark_4_TH"][tindex]),
-                Mark_4_PR=str(df["Mark_4_PR"][tindex]),
-                Mark_4_OA=str(df["Mark_4_OA"][tindex]),
-                Sub5=str(df["Sub5"][tindex]),
-                Mark_5_TH=str(df["Mark_5_TH"][tindex]),
-                Mark_5_PR=str(df["Mark_5_PR"][tindex]),
-                Mark_5_OA=str(df["Mark_5_OA"][tindex]),
-                Sub6=str(df["Sub6"][tindex]),
-                Mark_6_TH=str(df["Mark_6_TH"][tindex]),
-                Mark_6_PR=str(df["Mark_6_PR"][tindex]),
-                Mark_6_OA=str(df["Mark_6_OA"][tindex]),
-                Sub7=str(df["Sub7"][tindex]),
-                Mark_7_TH=str(df["Mark_7_TH"][tindex]),
-                Mark_7_PR=str(df["Mark_7_PR"][tindex]),
-                Mark_7_OA=str(df["Mark_7_OA"][tindex]),
-                Sub8=str(df["Sub8"][tindex]),
-                Mark_8_TH=str(df["Mark_8_TH"][tindex]),
-                Mark_8_PR=str(df["Mark_8_PR"][tindex]),
-                Mark_8_OA=str(df["Mark_8_OA"][tindex]),
-                Sub9=str(df["Sub9"][tindex]),
-                Mark_9_TH=str(df["Mark_9_TH"][tindex]),
-                Mark_9_PR=str(df["Mark_9_PR"][tindex]),
-                Mark_9_OA=str(df["Mark_9_OA"][tindex]),
-                Sub10=str(df["Sub10"][tindex]),
-                Mark_10_TH=str(df["Mark_10_TH"][tindex]),
-                Mark_10_PR=str(df["Mark_10_PR"][tindex]),
-                Mark_10_OA=str(df["Mark_10_OA"][tindex]),
-                SPI=str(df["SPI"][tindex]),
-                CPI=str(df["CPI"][tindex]),
-                CGPA=str(df["CGPA"][tindex]),
-                Status=str(df["Status"][tindex]),
-                CurrentBacklog=str(df["CurrentBacklog"][tindex]),
-                TotalBacklog=str(df["TotalBacklog"][tindex]),
-                DeclarationDate=str(df["DeclarationDate"][tindex]),              
-            )
-
-
-        submit = col1.button("Generate PDF")
-        
-    with col2:
-        pdf = pdfkit.from_string(html, False)
-        st.balloons()
-           
-        col2.success("🎉 Your Result PDF Generated!")                 
-        col2.download_button(
-            "⬇️ Download PDF",
-            data=pdf,
-            file_name=str(df["EnrolmentNo"][tindex].title()) + "-" + str(df["ExamName"][tindex].upper()) + ".pdf",
-            mime="application/octet-stream",
-        )
-        
-    
     
     st.markdown("<table id=lju><tbody><tr><th>Institute&amp;Name:</td><td>" + str(df["InstituteCode"][tindex]) + "</td></tr><tr><th>ExamName:</td><td>" + str(df["ExamName"][tindex]) + "</td></tr><tr><th>ExamMonth&amp;Year:</td><td>" + str(df["ExamMonthYear"][tindex]) + "</td></tr><tr><th>Semester:</td><td>" + str(df["Semester"][tindex]) + "</td></tr><tr><th>SeatNo:</td><td>" + str(df["SeatNo"][tindex]) + "</td></tr><tr><th>EnrolmentNo:</td><td>" + str(df["EnrolmentNo"][tindex].title()) + "</td></tr><tr><th>StudentName:</td><td>" + str(df["StudentName"][tindex]) + "</td></tr><tr><th>ProgramCode&amp;Name:</td><td>" + str(df["ProgramCode"][tindex]) + "</td></tr><tr><th>BranchCode&amp;Name:</td><td>" + str(df["BranchCode"][tindex]) + "</td></tr><tbody></table>&nbsp;&nbsp;", unsafe_allow_html=True)
     
@@ -152,19 +73,80 @@ if(textInput != "" and status):
     env = Environment(loader=FileSystemLoader("."), autoescape=select_autoescape())
     template = env.get_template("template.html")
 
-    # submit = st.button("Generate PDF")
+    submit = st.button("Generate PDF")
 
+    if submit:
+        html = template.render(
+            InstituteCode=str(df["InstituteCode"][tindex]),
+            ExamName=str(df["ExamName"][tindex]),
+            ExamMonthYear=str(df["ExamMonthYear"][tindex]),
+            Semester=str(df["Semester"][tindex]),
+            SeatNo=str(df["SeatNo"][tindex]),
+            EnrolmentNo=str(df["EnrolmentNo"][tindex].title()),
+            StudentName=str(df["StudentName"][tindex]),
+            ProgramCode=str(df["ProgramCode"][tindex]),
+            BranchCode=str(df["BranchCode"][tindex]),
+            Sub1=str(df["Sub1"][tindex]),
+            Mark_1_TH=str(df["Mark_1_TH"][tindex]),
+            Mark_1_PR=str(df["Mark_1_PR"][tindex]),
+            Mark_1_OA=str(df["Mark_1_OA"][tindex]),
+            Sub2=str(df["Sub2"][tindex]),
+            Mark_2_TH=str(df["Mark_2_TH"][tindex]),
+            Mark_2_PR=str(df["Mark_2_PR"][tindex]),
+            Mark_2_OA=str(df["Mark_2_OA"][tindex]),
+            Sub3=str(df["Sub3"][tindex]),
+            Mark_3_TH=str(df["Mark_3_TH"][tindex]),
+            Mark_3_PR=str(df["Mark_3_PR"][tindex]),
+            Mark_3_OA=str(df["Mark_3_OA"][tindex]),
+            Sub4=str(df["Sub4"][tindex]),
+            Mark_4_TH=str(df["Mark_4_TH"][tindex]),
+            Mark_4_PR=str(df["Mark_4_PR"][tindex]),
+            Mark_4_OA=str(df["Mark_4_OA"][tindex]),
+            Sub5=str(df["Sub5"][tindex]),
+            Mark_5_TH=str(df["Mark_5_TH"][tindex]),
+            Mark_5_PR=str(df["Mark_5_PR"][tindex]),
+            Mark_5_OA=str(df["Mark_5_OA"][tindex]),
+            Sub6=str(df["Sub6"][tindex]),
+            Mark_6_TH=str(df["Mark_6_TH"][tindex]),
+            Mark_6_PR=str(df["Mark_6_PR"][tindex]),
+            Mark_6_OA=str(df["Mark_6_OA"][tindex]),
+            Sub7=str(df["Sub7"][tindex]),
+            Mark_7_TH=str(df["Mark_7_TH"][tindex]),
+            Mark_7_PR=str(df["Mark_7_PR"][tindex]),
+            Mark_7_OA=str(df["Mark_7_OA"][tindex]),
+            Sub8=str(df["Sub8"][tindex]),
+            Mark_8_TH=str(df["Mark_8_TH"][tindex]),
+            Mark_8_PR=str(df["Mark_8_PR"][tindex]),
+            Mark_8_OA=str(df["Mark_8_OA"][tindex]),
+            Sub9=str(df["Sub9"][tindex]),
+            Mark_9_TH=str(df["Mark_9_TH"][tindex]),
+            Mark_9_PR=str(df["Mark_9_PR"][tindex]),
+            Mark_9_OA=str(df["Mark_9_OA"][tindex]),
+            Sub10=str(df["Sub10"][tindex]),
+            Mark_10_TH=str(df["Mark_10_TH"][tindex]),
+            Mark_10_PR=str(df["Mark_10_PR"][tindex]),
+            Mark_10_OA=str(df["Mark_10_OA"][tindex]),
+            SPI=str(df["SPI"][tindex]),
+            CPI=str(df["CPI"][tindex]),
+            CGPA=str(df["CGPA"][tindex]),
+            Status=str(df["Status"][tindex]),
+            CurrentBacklog=str(df["CurrentBacklog"][tindex]),
+            TotalBacklog=str(df["TotalBacklog"][tindex]),
+            DeclarationDate=str(df["DeclarationDate"][tindex]),              
+        )
 
-
+        pdf = pdfkit.from_string(html, False)
+        st.balloons()
+           
       
 
-        # st.success("🎉 Your Result PDF Generated!")                 
-        # st.download_button(
-            # "⬇️ Download PDF",
-            # data=pdf,
-            # file_name=str(df["EnrolmentNo"][tindex].title()) + "-" + str(df["ExamName"][tindex].upper()) + ".pdf",
-            # mime="application/octet-stream",
-        # )
+        st.success("🎉 Your Result PDF Generated!")                 
+        st.download_button(
+            "⬇️ Download PDF",
+            data=pdf,
+            file_name=str(df["EnrolmentNo"][tindex].title()) + "-" + str(df["ExamName"][tindex].upper()) + ".pdf",
+            mime="application/octet-stream",
+        )
 
     
 elif (textInput != "" and status == False):
