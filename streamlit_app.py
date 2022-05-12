@@ -76,7 +76,7 @@ if(textInput != "" and status):
     env = Environment(loader=FileSystemLoader("."), autoescape=select_autoescape())
     template = env.get_template("template.html")
 
-    left.submit = st.button("Generate PDF")
+    submit = st.button("Generate PDF")
 
     if submit:
         html = template.render(
@@ -142,8 +142,8 @@ if(textInput != "" and status):
         st.balloons()          
       
 
-        st.success("🎉 Your Result PDF Generated!")                 
-        st.download_button(
+        right.success("🎉 Your Result PDF Generated!")                 
+        right.download_button(
             "⬇️ Download PDF",
             data=pdf,
             file_name=str(df["EnrolmentNo"][tindex].title()) + "-" + str(df["ExamName"][tindex].upper()) + ".pdf",
