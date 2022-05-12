@@ -99,7 +99,7 @@ if (sidebarContent == "Semester Exam Report"):
                     ExamMonthYear=str(df["ExamMonthYear"][tindex]),
                     Semester=str(df["Semester"][tindex]),
                     SeatNo=str(df["SeatNo"][tindex]),
-                    EnrolmentNo=str(df["EnrolmentNo"][tindex]),
+                    EnrolmentNo=str(df["EnrolmentNo"][tindex].title()),
                     StudentName=str(df["StudentName"][tindex]),
                     ProgramCode=str(df["ProgramCode"][tindex]),
                     BranchCode=str(df["BranchCode"][tindex]),
