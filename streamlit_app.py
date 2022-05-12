@@ -61,7 +61,22 @@ if(textInput != "" and status):
     tindex = df[df["EnrolmentNo"] == textInput].index[0] #Finding the index of the search EnrolmentNo
     st.header("Welcome " + str(df["StudentName"][tindex]).title() +" !")            
     st.markdown("<style>#lju {border-collapse: collapse;  width: 100%;}</style>", unsafe_allow_html=True)
-    submit = st.button("Generate PDF")
+    
+    col1, col2 = st.columns(2)
+
+    with col1:
+        submit = col1.button("Generate PDF")
+        
+    with col2:
+        col2.success("🎉 Your Result PDF Generated!")                 
+        col2.download_button(
+            "⬇️ Download PDF",
+            data=pdf,
+            file_name=str(df["EnrolmentNo"][tindex].title()) + "-" + str(df["ExamName"][tindex].upper()) + ".pdf",
+            mime="application/octet-stream",
+        )
+    
+    
     
     
     st.markdown("<table id=lju><tbody><tr><th>Institute&amp;Name:</td><td>" + str(df["InstituteCode"][tindex]) + "</td></tr><tr><th>ExamName:</td><td>" + str(df["ExamName"][tindex]) + "</td></tr><tr><th>ExamMonth&amp;Year:</td><td>" + str(df["ExamMonthYear"][tindex]) + "</td></tr><tr><th>Semester:</td><td>" + str(df["Semester"][tindex]) + "</td></tr><tr><th>SeatNo:</td><td>" + str(df["SeatNo"][tindex]) + "</td></tr><tr><th>EnrolmentNo:</td><td>" + str(df["EnrolmentNo"][tindex].title()) + "</td></tr><tr><th>StudentName:</td><td>" + str(df["StudentName"][tindex]) + "</td></tr><tr><th>ProgramCode&amp;Name:</td><td>" + str(df["ProgramCode"][tindex]) + "</td></tr><tr><th>BranchCode&amp;Name:</td><td>" + str(df["BranchCode"][tindex]) + "</td></tr><tbody></table>&nbsp;&nbsp;", unsafe_allow_html=True)
@@ -141,13 +156,13 @@ if(textInput != "" and status):
            
       
 
-        st.success("🎉 Your Result PDF Generated!")                 
-        st.download_button(
-            "⬇️ Download PDF",
-            data=pdf,
-            file_name=str(df["EnrolmentNo"][tindex].title()) + "-" + str(df["ExamName"][tindex].upper()) + ".pdf",
-            mime="application/octet-stream",
-        )
+        # st.success("🎉 Your Result PDF Generated!")                 
+        # st.download_button(
+            # "⬇️ Download PDF",
+            # data=pdf,
+            # file_name=str(df["EnrolmentNo"][tindex].title()) + "-" + str(df["ExamName"][tindex].upper()) + ".pdf",
+            # mime="application/octet-stream",
+        # )
 
     
 elif (textInput != "" and status == False):
