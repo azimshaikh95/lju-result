@@ -85,7 +85,7 @@ if (sidebarContent == "Semester Exam Report"):
             st.markdown("<hr>", unsafe_allow_html=True)
 
             
-        elif (textInput != "" or status == False):
+        elif (textInput != "" and status == False):
             st.error("No Entry Found")
 
     with(owners):
