@@ -159,7 +159,7 @@ st.write("Last Updated On: " + lastupdated )
 
 
     
-div[data-testid*="stHorizontalBlock"] > div:nth-child(%(nth_child)s):nth-last-child(%(nth_last_child)s) button
+# div[data-testid*="stHorizontalBlock"] > div:nth-child(%(nth_child)s):nth-last-child(%(nth_last_child)s) button
 def style_button_row(clicked_button_ix, n_buttons):
     def get_button_indices(button_ix):
         return {
