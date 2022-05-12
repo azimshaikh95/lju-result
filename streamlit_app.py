@@ -87,7 +87,7 @@ if (sidebarContent == "Semester Exam Report"):
             template = env.get_template("template.html")
 
 
-            st.write("Fill in the data:")
+            # st.write("Fill in the data:")
             # form = st.form("template_info")
 
             # submit = form.form_submit_button("Generate PDF")
