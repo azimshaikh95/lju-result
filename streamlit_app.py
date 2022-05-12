@@ -59,7 +59,7 @@ if (sidebarContent == "Semester Exam Report"):
         st.image('ljulogo.png', use_column_width=True)
         st.markdown("<h1 style='text-align: center'><b>Semester Exam Report</b></h1>", unsafe_allow_html=True)
         st.markdown("<h1 style='text-align: center'><b>LJ Polytehnic</b></h1>", unsafe_allow_html=True)
-        st.write("Last Updated On: " + lastupdated )
+        st.write("<b>Last</b> Updated On: " + lastupdated )
         st.write("#####")
 
     with(login):
