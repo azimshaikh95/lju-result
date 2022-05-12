@@ -50,7 +50,7 @@ for i in range(len(df["EnrolmentNo"])):
 
 
 #WebApp -- "LJ University Result"
-sidebarContent = st.sidebar.radio("Menu", ["Semester Exam Report", "Milestone Leaderboard", "Program Resources"])
+# sidebarContent = st.sidebar.radio("Menu", ["Semester Exam Report", "Milestone Leaderboard", "Program Resources"])
 
 
 #SER
