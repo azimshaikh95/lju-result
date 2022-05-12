@@ -45,8 +45,8 @@ data = pd.read_csv("data/" + datex + ".csv",encoding='utf-8')
 df = pd.DataFrame(data)
 
 
-# for i in range(len(df["EnrolmentNo"])):
-    # df['EnrolmentNo'][i] = df['EnrolmentNo'][i].lower()
+for i in range(len(df["EnrolmentNo"])):
+    df['EnrolmentNo'][i] = df['EnrolmentNo'][i].lower()
 
 
 #WebApp -- "LJ University Result"
