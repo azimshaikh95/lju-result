@@ -63,7 +63,7 @@ if (sidebarContent == "Semester Exam Report"):
         st.write("#####")
 
     with(login):
-        textInput = st.text_input("Enter your EnrolmentNo").lower()
+        textInput = st.text_input("Enter your Enrolment No").lower()
 
         #Input Activity
         status = False
