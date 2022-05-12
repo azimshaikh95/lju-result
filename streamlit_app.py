@@ -72,7 +72,7 @@ if(textInput != "" and status):
     
     
     
-left, right = st.columns(2)
+    left, right = st.columns(2)
     
     
     env = Environment(loader=FileSystemLoader("."), autoescape=select_autoescape())
