@@ -67,7 +67,7 @@ textInput = st.text_input("Enter your Enrolment No").lower()
 
 #Input Activity
 status = False
-i = ["EnrolmentNo"]:
+i = ["EnrolmentNo"]
     if( i == textInput):
         status = True
     if(textInput != "" and status):
