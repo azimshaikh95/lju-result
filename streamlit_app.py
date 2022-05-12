@@ -21,9 +21,6 @@ def image_file_path_to_base64_string(filepath: str) -> str:
 st.set_page_config(layout="centered", page_icon="🎓", page_title="LJ Result App")
 #st.title("🎓 LJ University Result App")
 
-##############################################
-
-
 
 #Added by Azim
 from datetime import date
@@ -49,19 +46,10 @@ for i in range(len(df["EnrolmentNo"])):
     df['EnrolmentNo'][i] = df['EnrolmentNo'][i].lower()
 
 
-#WebApp -- "LJ University Result"
-# sidebarContent = st.sidebar.radio("Menu", ["Semester Exam Report", "Milestone Leaderboard", "Program Resources"])
-
-
-#SER
-# if (sidebarContent == "Semester Exam Report"):
-# with(header):
 st.image('ljulogo.png', use_column_width=True)
 st.markdown("<h1 style='text-align: center'><b>Semester Exam Report</b></h1>", unsafe_allow_html=True)
-st.markdown("<h1 style='text-align: center'><b>LJ Polytehnic</b></h1>", unsafe_allow_html=True)
+# st.markdown("<h1 style='text-align: center'><b>LJ Polytehnic</b></h1>", unsafe_allow_html=True)
 
-
-# with(login):
 textInput = st.text_input("Enter your Enrolment No").lower()
 
 #Input Activity
@@ -164,22 +152,7 @@ if(textInput != "" and status):
 elif (textInput != "" and status == False):
     st.error("No Entry Found")
 
-    # with(owners):
+
 st.write("####")
 st.markdown('<body class= "last" >Developed & Managed By: <a href="https://in.linkedin.com/in/mohammedazim-shaikh">MohammedAzim Shaikh</a></body>', unsafe_allow_html=True)
 st.write("Last Updated On: " + lastupdated )
-        
-        
-
-
-########################################
-
-    # st.write("  \n  This app shows you how you can use Streamlit to make a PDF generator app in just a few lines of code!")
-
-    # left, right = st.columns(2)
-
-    # right.write("Here's the template we'll be using:")
-
-    # right.image("ljulogo.png", width=300)
-
-
