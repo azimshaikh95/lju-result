@@ -69,7 +69,7 @@ if(textInput != "" and status):
         
     with col2:
         pdf = pdfkit.from_string(html, False)
-        col2.balloons()
+        st.balloons()
            
         col2.success("🎉 Your Result PDF Generated!")                 
         col2.download_button(
