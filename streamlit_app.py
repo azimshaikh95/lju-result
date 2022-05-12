@@ -86,11 +86,6 @@ if (sidebarContent == "Semester Exam Report"):
             env = Environment(loader=FileSystemLoader("."), autoescape=select_autoescape())
             template = env.get_template("template.html")
 
-
-            # st.write("Fill in the data:")
-            # form = st.form("template_info")
-
-            # submit = form.form_submit_button("Generate PDF")
             submit = st.button("Generate PDF")
 
             if submit:
@@ -172,7 +167,7 @@ if (sidebarContent == "Semester Exam Report"):
 
     with(owners):
         st.write("####")
-        st.markdown('<body class= "last" >Developed & Managed By: <a href="https://in.linkedin.com/in/mohammedazim-shaikh">MohammedAzim Shaikh</a></body>', unsafe_allow_html=True)
+        st.markdown("Developed & Managed By: <a href="https://in.linkedin.com/in/mohammedazim-shaikh">MohammedAzim Shaikh</a>", unsafe_allow_html=True)
         
         
 
