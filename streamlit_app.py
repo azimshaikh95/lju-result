@@ -72,7 +72,7 @@ if (sidebarContent == "Semester Exam Report"):
                 status = True
         if(textInput != "" and status):
             tindex = df[df["EnrolmentNo"] == textInput].index[0] #Finding the index of the search EnrolmentNo
-            st.subheader("Welcome " + str(df["StudentName"][tindex]).title() +" !")
+            st.header("Welcome " + str(df["StudentName"][tindex]).title() +" !")
 
             # st.write("**Institution:** " + str(df["InstituteCode"][tindex]))
             # st.write("**Branch Code & Name:** " + str(df["BranchCode"][tindex]))
@@ -82,7 +82,7 @@ if (sidebarContent == "Semester Exam Report"):
             # st.write("**CPI:** " + str(df["CPI"][tindex]))
             # st.write("**CPI:** " + str(df["CPI"][tindex]))
 
-            st.markdown("<hr>", unsafe_allow_html=True)
+            # st.markdown("<hr>", unsafe_allow_html=True)
             # st.markdown("<table><tr><td>" + str(df["InstituteCode"][tindex]) + "<td>2<td>3</tr></table>", unsafe_allow_html=True)
             
             st.markdown("<style>#lju {border-collapse: collapse;  width: 100%;}</style>", unsafe_allow_html=True)
