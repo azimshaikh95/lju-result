@@ -158,13 +158,11 @@ if (sidebarContent == "Semester Exam Report"):
                    
               
 
-                st.success("🎉 Your diploma was generated!")
-                 #st.write(html, unsafe_allow_html=True)
-                 #st.write("")
+                st.success("🎉 Your Result PDF Generated!")                 
                 st.download_button(
                     "⬇️ Download PDF",
                     data=pdf,
-                    file_name=str(df["EnrolmentNo"][tindex]) + "-" + str(df["ExamName"][tindex]) + ".pdf",
+                    file_name=str(df["EnrolmentNo"][tindex].title()) + "-" + str(df["ExamName"][tindex.upper()]) + ".pdf",
                     mime="application/octet-stream",
                 )
 
