@@ -62,6 +62,11 @@ if(textInput != "" and status):
     st.header("Welcome " + str(df["StudentName"][tindex]).title() +" !")            
     st.markdown("<style>#lju {border-collapse: collapse;  width: 100%;}</style>", unsafe_allow_html=True)
     
+    if ( str(df["Status"][tindex]) == "Pass" ):
+        st.balloons()  
+        st.success("You have cleared the exam!")
+    else:
+        st.error("You haven't cleared the exam!")
     
     st.markdown("<table id=lju><tbody><tr><th>Institute&amp;Name:</td><td>" + str(df["InstituteCode"][tindex]) + "</td></tr><tr><th>ExamName:</td><td>" + str(df["ExamName"][tindex]) + "</td></tr><tr><th>ExamMonth&amp;Year:</td><td>" + str(df["ExamMonthYear"][tindex]) + "</td></tr><tr><th>Semester:</td><td>" + str(df["Semester"][tindex]) + "</td></tr><tr><th>SeatNo:</td><td>" + str(df["SeatNo"][tindex]) + "</td></tr><tr><th>EnrolmentNo:</td><td>" + str(df["EnrolmentNo"][tindex].title()) + "</td></tr><tr><th>StudentName:</td><td>" + str(df["StudentName"][tindex]) + "</td></tr><tr><th>ProgramCode&amp;Name:</td><td>" + str(df["ProgramCode"][tindex]) + "</td></tr><tr><th>BranchCode&amp;Name:</td><td>" + str(df["BranchCode"][tindex]) + "</td></tr><tbody></table>&nbsp;&nbsp;", unsafe_allow_html=True)
     
@@ -143,11 +148,11 @@ if(textInput != "" and status):
 
         pdf = pdfkit.from_string(html, False)
         # st.balloons()          
-        if ( str(df["Status"][tindex]) == "Pass" ):
-            st.balloons()  
-            st.success("You have cleared the exam!")
-        else:
-            st.warning("You haven't cleared the exam!")
+        # if ( str(df["Status"][tindex]) == "Pass" ):
+            # st.balloons()  
+            # st.success("You have cleared the exam!")
+        # else:
+            # st.error("You haven't cleared the exam!")
       
 
         right.success("🎉 Your Result PDF Generated!")                 
