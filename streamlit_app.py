@@ -46,7 +46,7 @@ df = pd.DataFrame(data)
     # df['EnrolmentNo'][i] = df['EnrolmentNo'][i].lower()
 
 for i in range(len(df["SeatNo"])):
-    df['SeatNo'][i] = df['SeatNo'][i]
+    df['SeatNo'][i] = df['SeatNo'][i].lower()
 
 
 st.image('ljulogo.png', use_column_width=True)
@@ -57,7 +57,7 @@ textInput = st.text_input("Enter your Enrolment No").lower()
 
 #Input Activity
 status = False
-for i in df["EnrolmentNo"]:
+for i in df["SeatNo"]:
     if( i == textInput):
         status = True
 if(textInput != "" and status):
