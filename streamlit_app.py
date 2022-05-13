@@ -42,22 +42,18 @@ data = pd.read_csv("data/" + datex + ".csv",encoding='utf-8')
 df = pd.DataFrame(data)
 
 
-# for i in range(len(df["EnrolmentNo"])):
-    # df['EnrolmentNo'][i] = df['EnrolmentNo'][i].lower()
-
-for i in range(len(df["SeatNo"])):
-    df['SeatNo'][i] = df['SeatNo'][i].lower()
+for i in range(len(df["EnrolmentNo"])):
+    df['EnrolmentNo'][i] = df['EnrolmentNo'][i].lower()
 
 
 st.image('ljulogo.png', use_column_width=True)
 st.markdown("<h1 style='text-align: center'><b>Semester Exam Report</b></h1>", unsafe_allow_html=True)
-# st.markdown("<h1 style='text-align: center'><b>LJ Polytehnic</b></h1>", unsafe_allow_html=True)
 
 textInput = st.text_input("Enter your Enrolment No").lower()
 
 #Input Activity
 status = False
-for i in df["SeatNo"]:
+for i in df["EnrolmentNo"]:
     if( i == textInput):
         status = True
 if(textInput != "" and status):
