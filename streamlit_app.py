@@ -84,7 +84,7 @@ if(textInput != "" and status):
     template = env.get_template("template.html")
 
     left.info("Want to Save?")
-    submit = left.button("🖺 Generate PDF")
+    submit = left.button("📝 Generate PDF")
 
     if submit:
         html = template.render(
@@ -157,7 +157,7 @@ if(textInput != "" and status):
 
         right.success("🎉 Your Result PDF Generated!")                 
         right.download_button(
-            "⬇️ Download PDF",
+            "🖨️ Download PDF",
             data=pdf,
             file_name=str(df["EnrolmentNo"][tindex].title()) + "-" + str(df["ExamName"][tindex].upper()) + ".pdf",
             mime="application/octet-stream",
