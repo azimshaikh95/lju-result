@@ -60,6 +60,7 @@ if(textInput != "" and status):
     tindex = df[df["EnrolmentNo"] == textInput].index[0] #Finding the index of the search EnrolmentNo
     st.header("Welcome " + str(df["StudentName"][tindex]).title() +" !")            
     st.markdown("<style>#lju {border-collapse: collapse;  width: 100%;}</style>", unsafe_allow_html=True)
+    st.write( os.path() )
     
     if ( str(df["Status"][tindex]) == "Pass" ):
         st.balloons()  
@@ -143,7 +144,7 @@ if(textInput != "" and status):
             CurrentBacklog=str(df["CurrentBacklog"][tindex]),
             TotalBacklog=str(df["TotalBacklog"][tindex]),
             DeclarationDate=str(df["DeclarationDate"][tindex]),
-            student_pic=image_file_path_to_base64_string('pic\\m060.png'),
+            student_pic=image_file_path_to_base64_string('pic/m060.png'),
             logo_img_string=image_file_path_to_base64_string('ljulogo.png'),
         )
 
