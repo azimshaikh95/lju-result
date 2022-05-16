@@ -50,8 +50,9 @@ st.image('ljulogo.png', use_column_width=True)
 st.markdown("<h1 style='text-align: center'><b>Semester Exam Report</b></h1>", unsafe_allow_html=True)
 
 
-textInput = st.number_input("Enter your Enrolment No", value = int)
+textInputn = st.number_input("Enter your Enrolment No", value = int)
 # textInput = st.text_input("Enter your Enrolment No")
+textInput = str (textInput)
 
 #Input Activity
 status = False
