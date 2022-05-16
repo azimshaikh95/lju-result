@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+#lju {
+  border-collapse: collapse;
+  width: 90%;  
+  <!-- font-family: Arial, Helvetica, sans-serif; -->
+}
+
+#lju td, #lju th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#lju tr:nth-child(even){background-color: #f2f2f2;}
+
+#lju tr:hover {background-color: #ddd;}
+
+#lju th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #1B4F72;
+  color: white;
+}
+
+h1 , h2, h3 {
+font-weight: bold;
+margin-top: 0px;
+margin-bottom: 10px;
+text-align: center;
+}
+
+table.center {
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+
+</style>
+</head>
+<body>
+
+<table id=lju class=center>
+	<tbody>
+		
+		<tr>
+			<td><img src="data:image/png;base64,{{ logo_img_string }}" width="500px"></td>
+			
+		</tr>
+	<tbody>
+</table>
+
+<br>
+
+<!--br>
+<h1>Lok Jagruti Kendra University</h1>
+<h3>Near Sarkhej-Sanand Circle, Off. S.G. Road, Ahmedabad-382210</h3-->
+<hr>
+<br>
+
+<h2>Exam Hallticket</h2>
+<table id=lju class=center>
+	<tbody>
+		
+		<tr>
+			<th>Institute &amp; Name:</th>
+			<td>{{ InstituteCode }}</td>
+			<td rowspan=7><img src="data:image/png;base64,{{ student_pic }}" width="100px"></td>
+		</tr>
+		<tr>
+			<th>Exam Name:</th>
+			<td>{{ ExamName }}</td>
+		</tr>
+		<tr>
+			<th>Exam Month &amp; Year:</th>
+			<td>{{ ExamMonthYear }}</td>
+		</tr>
+		<tr>
+			<th>Semester:</th>
+			<td>{{ Semester }}</td>
+		</tr>
+		<tr>
+			<th>Seat No:</th>
+			<td>{{ SeatNo }}</td>
+		</tr>
+		<tr>
+			<th>Enrolment No:</th>
+			<td>{{ EnrolmentNo }}</td>
+		</tr>
+		<tr>
+			<th>Student Name:</th>
+			<td>{{ StudentName }}</td>
+		</tr>
+		<tr>
+			<th>Program Code &amp; Name:</th>
+			<td>{{ ProgramCode }}</td>
+			<td rowspan=7> Sign </td>
+		</tr>
+		<tr>
+			<th>Branch Code &amp; Name:</th>
+			<td>{{ BranchCode }}</td>
+		</tr>
+		
+	</tbody>
+</table>
+
+
+<br>
+
+<table id=lju class=center>
+<tbody >
+
+		<tr >
+			<th>Subject Code and Name</th>
+			<th>Theory Grade</th>
+			<th>Practical Grade</th>
+			<th>Overall Grade</th>
+		</tr>
+
+		<tr>
+			<td>{{ Sub1 }}</td>
+			<td>{{ Mark_1_TH }}</td>
+			<td>{{ Mark_1_PR }}</td>
+			<td>{{ Mark_1_OA }}</td>
+		</tr>
+
+		<tr>
+			<td>{{ Sub2 }}</td>
+			<td>{{ Mark_2_TH }}</td>
+			<td>{{ Mark_2_PR }}</td>
+			<td>{{ Mark_2_OA }}</td>
+		</tr>
+
+		<tr>
+			<td>{{ Sub3 }}</td>
+			<td>{{ Mark_3_TH }}</td>
+			<td>{{ Mark_3_PR }}</td>
+			<td>{{ Mark_3_OA }}</td>
+		</tr>
+
+		<tr>
+			<td>{{ Sub4 }}</td>
+			<td>{{ Mark_4_TH }}</td>
+			<td>{{ Mark_4_PR }}</td>
+			<td>{{ Mark_4_OA }}</td>
+		</tr>
+
+		<tr>
+			<td>{{ Sub5 }}</td>
+			<td>{{ Mark_5_TH }}</td>
+			<td>{{ Mark_5_PR }}</td>
+			<td>{{ Mark_5_OA }}</td>
+		</tr>
+
+		<tr>
+			<td>{{ Sub6 }}</td>
+			<td>{{ Mark_6_TH }}</td>
+			<td>{{ Mark_6_PR }}</td>
+			<td>{{ Mark_6_OA }}</td>
+		</tr>
+
+		<!--tr>
+			<td>{{ Sub7 }}</td>
+			<td>{{ Mark_7_TH }}</td>
+			<td>{{ Mark_7_PR }}</td>
+			<td>{{ Mark_7_OA }}</td>
+		</tr>
+
+		<tr>
+			<td>{{ Sub8 }}</td>
+			<td>{{ Mark_8_TH }}</td>
+			<td>{{ Mark_8_PR }}</td>
+			<td>{{ Mark_8_OA }}</td>
+		</tr>
+
+		<tr>
+			<td>{{ Sub9 }}</td>
+			<td>{{ Mark_9_TH }}</td>
+			<td>{{ Mark_9_PR }}</td>
+			<td>{{ Mark_9_OA }}</td>
+		</tr>
+
+		<tr>
+			<td>{{ Sub10 }}</td>
+			<td>{{ Mark_10_TH }}</td>
+			<td>{{ Mark_10_PR }}</td>
+			<td>{{ Mark_10_OA }}</td>
+		</tr-->
+
+
+</tbody>
+</table>
+
+&nbsp;
+
+<table id=lju class=center>
+	<tbody>
+		
+		<tr>
+			<td>SPI:</td>
+			<td>{{ SPI }}</td>
+		</tr>
+		<tr>
+			<td>CPI:</td>
+			<td>{{ CPI }}</td>
+		</tr>
+		<tr>
+			<td>CGPA:</td>
+			<td>{{ CGPA }}</td>
+		</tr>
+		<tr>
+			<td>Status:</td>
+			<td>{{ Status }}</td>
+		</tr>
+		<tr>
+			<td>Current Backlog:</td>
+			<td>{{ CurrentBacklog }}</td>
+		</tr>
+		<tr>
+			<td>Total Backlog:</td>
+			<td>{{ TotalBacklog }}</td>
+		</tr>
+		<tr>
+			<td>Declaration Date:</td>
+			<td>{{ DeclarationDate }}</td>
+		</tr>
+
+	</tbody>
+</table>
+
+<br>
+
+<table id=lju class=center>
+	<tbody>
+		
+		<tr>
+		<td>Note: This is a computer-generated provisional result, please consider the hard-copy Grade Sheet as final result. Result queries will be entertained till 5-days from the result declaration date. No result queries will be entertained afterwards.</td>
+		</tr>
+	</tbody>
+</table>	
+
+
+</center>
+
+</body>
+</html>
