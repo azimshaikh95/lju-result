@@ -55,10 +55,10 @@ textInput = st.text_input("Enter your Enrolment No").lower()
 
 #Input Activity
 status = False
+st.header( type(textInput) )
 for i in df["EnrolmentNo"]:
     if( i == textInput):
-        status = True
-        st.header( type(textInput) )
+        status = True        
 if(textInput != "" and status):
     tindex = df[df["EnrolmentNo"] == textInput].index[0] #Finding the index of the search EnrolmentNo
     st.header("Welcome " + str(df["StudentName"][tindex]).title() +" !")            
