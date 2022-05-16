@@ -60,7 +60,7 @@ if(textInput != "" and status):
     tindex = df[df["EnrolmentNo"] == textInput].index[0] #Finding the index of the search EnrolmentNo
     st.header("Welcome " + str(df["StudentName"][tindex]).title() +" !")            
     st.markdown("<style>#lju {border-collapse: collapse;  width: 100%;}</style>", unsafe_allow_html=True)
-    st.header( os.path() )
+    st.header( path() )
     
     if ( str(df["Status"][tindex]) == "Pass" ):
         st.balloons()  
