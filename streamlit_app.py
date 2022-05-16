@@ -19,7 +19,7 @@ def image_file_path_to_base64_string(filepath: str) -> str:
 
 
 st.set_page_config(layout="centered", page_icon="🎓", page_title="LJ Result App")
-#st.title("🎓 LJ University Result App")
+#st.title("🎓 LJ University Hallticket App")
 
 
 #Added by Azim
@@ -28,7 +28,7 @@ today = date.today()
 
 
 #Variable Names
-datex = "w22"
+datex = "ht_w22"
 lastupdated = "01-01-2022 05:00 PM"
 
 #Program Variables
@@ -77,12 +77,12 @@ if(textInput != "" and status):
     else:
         st.error("You haven't cleared the exam!")
     
-    st.markdown("<table id=lju><tbody><tr><th>Institute&amp;Name:</td><td>" + str(df["InstituteCode"][tindex]) + "</td></tr><tr><th>ExamName:</td><td>" + str(df["ExamName"][tindex]) + "</td></tr><tr><th>ExamMonth&amp;Year:</td><td>" + str(df["ExamMonthYear"][tindex]) + "</td></tr><tr><th>Semester:</td><td>" + str(df["Semester"][tindex]) + "</td></tr><tr><th>SeatNo:</td><td>" + str(df["SeatNo"][tindex]) + "</td></tr><tr><th>EnrolmentNo:</td><td>" + str(df["EnrolmentNo"][tindex].title()) + "</td></tr><tr><th>StudentName:</td><td>" + str(df["StudentName"][tindex]) + "</td></tr><tr><th>ProgramCode&amp;Name:</td><td>" + str(df["ProgramCode"][tindex]) + "</td></tr><tr><th>BranchCode&amp;Name:</td><td>" + str(df["BranchCode"][tindex]) + "</td></tr><tbody></table>&nbsp;&nbsp;", unsafe_allow_html=True)
+    # st.markdown("<table id=lju><tbody><tr><th>Institute&amp;Name:</td><td>" + str(df["InstituteCode"][tindex]) + "</td></tr><tr><th>ExamName:</td><td>" + str(df["ExamName"][tindex]) + "</td></tr><tr><th>ExamMonth&amp;Year:</td><td>" + str(df["ExamMonthYear"][tindex]) + "</td></tr><tr><th>Semester:</td><td>" + str(df["Semester"][tindex]) + "</td></tr><tr><th>SeatNo:</td><td>" + str(df["SeatNo"][tindex]) + "</td></tr><tr><th>EnrolmentNo:</td><td>" + str(df["EnrolmentNo"][tindex].title()) + "</td></tr><tr><th>StudentName:</td><td>" + str(df["StudentName"][tindex]) + "</td></tr><tr><th>ProgramCode&amp;Name:</td><td>" + str(df["ProgramCode"][tindex]) + "</td></tr><tr><th>BranchCode&amp;Name:</td><td>" + str(df["BranchCode"][tindex]) + "</td></tr><tbody></table>&nbsp;&nbsp;", unsafe_allow_html=True)
     
-    st.markdown("<table id=lju><tbody ><tr><th>Subject Code and Name</th><th>Theory Grade</th><th>Practical Grade</th><th>Overall Grade</th></tr><tr><td>" + str(df["Sub1"][tindex]) + "</td><td>" + str(df["Mark_1_TH"][tindex]) + "</td><td>" + str(df["Mark_1_PR"][tindex]) + "</td><td>" + str(df["Mark_1_OA"][tindex]) + "</td></tr><tr><td>" + str(df["Sub2"][tindex]) + "</td><td>" + str(df["Mark_2_TH"][tindex]) + "</td><td>" + str(df["Mark_2_PR"][tindex]) + "</td><td>" + str(df["Mark_2_OA"][tindex]) + "</td></tr><tr><td>" + str(df["Sub3"][tindex]) + "</td><td>" + str(df["Mark_3_TH"][tindex]) + "</td><td>" + str(df["Mark_3_PR"][tindex]) + "</td><td>" + str(df["Mark_3_OA"][tindex]) + "</td></tr><tr><td>" + str(df["Sub4"][tindex]) + "</td><td>" + str(df["Mark_4_TH"][tindex]) + "</td><td>" + str(df["Mark_4_PR"][tindex]) + "</td><td>" + str(df["Mark_4_OA"][tindex]) + "</td><tr><td>" + str(df["Sub5"][tindex]) + "</td><td>" + str(df["Mark_5_TH"][tindex]) + "</td><td>" + str(df["Mark_5_PR"][tindex]) + "</td><td>" + str(df["Mark_5_OA"][tindex]) + "</td></tr><tr><td>" + str(df["Sub6"][tindex]) + "</td><td>" + str(df["Mark_6_TH"][tindex]) + "</td><td>" + str(df["Mark_6_PR"][tindex]) + "</td><td>" + str(df["Mark_6_OA"][tindex]) + "</td></tr><!--tr><td>" + str(df["Sub7"][tindex]) + "</td><td>" + str(df["Mark_7_TH"][tindex]) + "</td><td>" + str(df["Mark_7_PR"][tindex]) + "</td><td>" + str(df["Mark_7_OA"][tindex]) + "</td></tr><tr><td>" + str(df["Sub8"][tindex]) + "</td><td>" + str(df["Mark_8_TH"][tindex]) + "</td><td>" + str(df["Mark_8_PR"][tindex]) + "</td><td>" + str(df["Mark_8_OA"][tindex]) + "</td></tr><tr><td>" + str(df["Sub9"][tindex]) + "</td><td>" + str(df["Mark_9_TH"][tindex]) + "</td><td>" + str(df["Mark_9_PR"][tindex]) + "</td><td>" + str(df["Mark_9_OA"][tindex]) + "</td></tr><tr><td>" + str(df["Sub10"][tindex]) + "</td><td>" + str(df["Mark_10_TH"][tindex]) + "</td><td>" + str(df["Mark_10_PR"][tindex]) + "</td><td>" + str(df["Mark_10_OA"][tindex]) + "</td></tr--></tbody></table>&nbsp;&nbsp;",unsafe_allow_html=True)
+    # st.markdown("<table id=lju><tbody ><tr><th>Subject Code and Name</th><th>Theory Grade</th><th>Practical Grade</th><th>Overall Grade</th></tr><tr><td>" + str(df["Sub1"][tindex]) + "</td><td>" + str(df["Mark_1_TH"][tindex]) + "</td><td>" + str(df["Mark_1_PR"][tindex]) + "</td><td>" + str(df["Mark_1_OA"][tindex]) + "</td></tr><tr><td>" + str(df["Sub2"][tindex]) + "</td><td>" + str(df["Mark_2_TH"][tindex]) + "</td><td>" + str(df["Mark_2_PR"][tindex]) + "</td><td>" + str(df["Mark_2_OA"][tindex]) + "</td></tr><tr><td>" + str(df["Sub3"][tindex]) + "</td><td>" + str(df["Mark_3_TH"][tindex]) + "</td><td>" + str(df["Mark_3_PR"][tindex]) + "</td><td>" + str(df["Mark_3_OA"][tindex]) + "</td></tr><tr><td>" + str(df["Sub4"][tindex]) + "</td><td>" + str(df["Mark_4_TH"][tindex]) + "</td><td>" + str(df["Mark_4_PR"][tindex]) + "</td><td>" + str(df["Mark_4_OA"][tindex]) + "</td><tr><td>" + str(df["Sub5"][tindex]) + "</td><td>" + str(df["Mark_5_TH"][tindex]) + "</td><td>" + str(df["Mark_5_PR"][tindex]) + "</td><td>" + str(df["Mark_5_OA"][tindex]) + "</td></tr><tr><td>" + str(df["Sub6"][tindex]) + "</td><td>" + str(df["Mark_6_TH"][tindex]) + "</td><td>" + str(df["Mark_6_PR"][tindex]) + "</td><td>" + str(df["Mark_6_OA"][tindex]) + "</td></tr><!--tr><td>" + str(df["Sub7"][tindex]) + "</td><td>" + str(df["Mark_7_TH"][tindex]) + "</td><td>" + str(df["Mark_7_PR"][tindex]) + "</td><td>" + str(df["Mark_7_OA"][tindex]) + "</td></tr><tr><td>" + str(df["Sub8"][tindex]) + "</td><td>" + str(df["Mark_8_TH"][tindex]) + "</td><td>" + str(df["Mark_8_PR"][tindex]) + "</td><td>" + str(df["Mark_8_OA"][tindex]) + "</td></tr><tr><td>" + str(df["Sub9"][tindex]) + "</td><td>" + str(df["Mark_9_TH"][tindex]) + "</td><td>" + str(df["Mark_9_PR"][tindex]) + "</td><td>" + str(df["Mark_9_OA"][tindex]) + "</td></tr><tr><td>" + str(df["Sub10"][tindex]) + "</td><td>" + str(df["Mark_10_TH"][tindex]) + "</td><td>" + str(df["Mark_10_PR"][tindex]) + "</td><td>" + str(df["Mark_10_OA"][tindex]) + "</td></tr--></tbody></table>&nbsp;&nbsp;",unsafe_allow_html=True)
     
     
-    st.markdown("<table id=lju><tbody><tr><td>SPI:</td><td>" + str(df["SPI"][tindex]) +" </td></tr><tr><td>CPI:</td><td>" + str(df["CPI"][tindex]) +"</td></tr><tr><td>CGPA:</td><td>" + str(df["CGPA"][tindex]) +"</td></tr><tr><td>Status:</td><td>" + str(df["Status"][tindex]) +"</td></tr><tr><td>Current Backlog:</td><td>" + str(df["CurrentBacklog"][tindex]) +"</td></tr><tr><td>Total Backlog:</td><td>" + str(df["TotalBacklog"][tindex]) +"</td></tr><tr><td>Declaration Date:</td><td>" + str(df["DeclarationDate"][tindex]) +"</td></tr></tbody></table>&nbsp;&nbsp;",unsafe_allow_html=True)
+    # st.markdown("<table id=lju><tbody><tr><td>SPI:</td><td>" + str(df["SPI"][tindex]) +" </td></tr><tr><td>CPI:</td><td>" + str(df["CPI"][tindex]) +"</td></tr><tr><td>CGPA:</td><td>" + str(df["CGPA"][tindex]) +"</td></tr><tr><td>Status:</td><td>" + str(df["Status"][tindex]) +"</td></tr><tr><td>Current Backlog:</td><td>" + str(df["CurrentBacklog"][tindex]) +"</td></tr><tr><td>Total Backlog:</td><td>" + str(df["TotalBacklog"][tindex]) +"</td></tr><tr><td>Declaration Date:</td><td>" + str(df["DeclarationDate"][tindex]) +"</td></tr></tbody></table>&nbsp;&nbsp;",unsafe_allow_html=True)
     
     
     
@@ -102,58 +102,28 @@ if(textInput != "" and status):
             ExamMonthYear=str(df["ExamMonthYear"][tindex]),
             Semester=str(df["Semester"][tindex]),
             SeatNo=str(df["SeatNo"][tindex]),
-            EnrolmentNo=str(df["EnrolmentNo"][tindex].title()),
+            EnrolmentNo=str(df["EnrolmentNo"][tindex]),
             StudentName=str(df["StudentName"][tindex]),
             ProgramCode=str(df["ProgramCode"][tindex]),
             BranchCode=str(df["BranchCode"][tindex]),
             Sub1=str(df["Sub1"][tindex]),
-            Mark_1_TH=str(df["Mark_1_TH"][tindex]),
-            Mark_1_PR=str(df["Mark_1_PR"][tindex]),
-            Mark_1_OA=str(df["Mark_1_OA"][tindex]),
             Sub2=str(df["Sub2"][tindex]),
-            Mark_2_TH=str(df["Mark_2_TH"][tindex]),
-            Mark_2_PR=str(df["Mark_2_PR"][tindex]),
-            Mark_2_OA=str(df["Mark_2_OA"][tindex]),
             Sub3=str(df["Sub3"][tindex]),
-            Mark_3_TH=str(df["Mark_3_TH"][tindex]),
-            Mark_3_PR=str(df["Mark_3_PR"][tindex]),
-            Mark_3_OA=str(df["Mark_3_OA"][tindex]),
             Sub4=str(df["Sub4"][tindex]),
-            Mark_4_TH=str(df["Mark_4_TH"][tindex]),
-            Mark_4_PR=str(df["Mark_4_PR"][tindex]),
-            Mark_4_OA=str(df["Mark_4_OA"][tindex]),
             Sub5=str(df["Sub5"][tindex]),
-            Mark_5_TH=str(df["Mark_5_TH"][tindex]),
-            Mark_5_PR=str(df["Mark_5_PR"][tindex]),
-            Mark_5_OA=str(df["Mark_5_OA"][tindex]),
             Sub6=str(df["Sub6"][tindex]),
-            Mark_6_TH=str(df["Mark_6_TH"][tindex]),
-            Mark_6_PR=str(df["Mark_6_PR"][tindex]),
-            Mark_6_OA=str(df["Mark_6_OA"][tindex]),
-            Sub7=str(df["Sub7"][tindex]),
-            Mark_7_TH=str(df["Mark_7_TH"][tindex]),
-            Mark_7_PR=str(df["Mark_7_PR"][tindex]),
-            Mark_7_OA=str(df["Mark_7_OA"][tindex]),
-            Sub8=str(df["Sub8"][tindex]),
-            Mark_8_TH=str(df["Mark_8_TH"][tindex]),
-            Mark_8_PR=str(df["Mark_8_PR"][tindex]),
-            Mark_8_OA=str(df["Mark_8_OA"][tindex]),
-            Sub9=str(df["Sub9"][tindex]),
-            Mark_9_TH=str(df["Mark_9_TH"][tindex]),
-            Mark_9_PR=str(df["Mark_9_PR"][tindex]),
-            Mark_9_OA=str(df["Mark_9_OA"][tindex]),
-            Sub10=str(df["Sub10"][tindex]),
-            Mark_10_TH=str(df["Mark_10_TH"][tindex]),
-            Mark_10_PR=str(df["Mark_10_PR"][tindex]),
-            Mark_10_OA=str(df["Mark_10_OA"][tindex]),
-            SPI=str(df["SPI"][tindex]),
-            CPI=str(df["CPI"][tindex]),
-            CGPA=str(df["CGPA"][tindex]),
-            Status=str(df["Status"][tindex]),
-            CurrentBacklog=str(df["CurrentBacklog"][tindex]),
-            TotalBacklog=str(df["TotalBacklog"][tindex]),
-            DeclarationDate=str(df["DeclarationDate"][tindex]),
-            # student_pic=image_file_path_to_base64_string('pic/m060.jpg'),
+            Date1=str(df["Date1"][tindex]),
+            Date2=str(df["Date2"][tindex]),
+            Date3=str(df["Date3"][tindex]),
+            Date4=str(df["Date4"][tindex]),
+            Date5=str(df["Date5"][tindex]),
+            Date6=str(df["Date6"][tindex]),
+            Time1=str(df["Time1"][tindex]),
+            Time2=str(df["Time2"][tindex]),
+            Time3=str(df["Time3"][tindex]),
+            Time4=str(df["Time4"][tindex]),
+            Time5=str(df["Time5"][tindex]),
+            Time6=str(df["Time6"][tindex]),
             student_pic=image_file_path_to_base64_string("pic/2021012250610" + str(df["EnrolmentNo"][tindex][-3:]) + ".jpg"),
             logo_img_string=image_file_path_to_base64_string('ljulogo.png'),
 
