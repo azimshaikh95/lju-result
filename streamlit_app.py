@@ -53,7 +53,7 @@ for i in range(len(df["EnrolmentNo"])):
     # df['EnrolmentNo'][i] = df['EnrolmentNo'][i]
     
 st.image('ljulogo.png', use_column_width=True)
-st.markdown("<h1 style='text-align: center'><b>Semester Exam Report</b></h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center'><b>Exam Hallticket Generator</b></h1>", unsafe_allow_html=True)
 
 
 textInput = st.text_input("Enter your Enrolment No").lower()
