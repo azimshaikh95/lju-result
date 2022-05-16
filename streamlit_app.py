@@ -143,25 +143,26 @@ if(textInput != "" and status):
             Status=str(df["Status"][tindex]),
             CurrentBacklog=str(df["CurrentBacklog"][tindex]),
             TotalBacklog=str(df["TotalBacklog"][tindex]),
-            DeclarationDate=str(df["DeclarationDate"][tindex]),              
+            DeclarationDate=str(df["DeclarationDate"][tindex]),
+            image_file_path_to_base64_string('.//ljulogo.png'),
         )
 
-        # pdf = pdfkit.from_string(html, False)
-        # st.balloons()          
-        # if ( str(df["Status"][tindex]) == "Pass" ):
-            # st.balloons()  
-            # st.success("You have cleared the exam!")
-        # else:
-            # st.error("You haven't cleared the exam!")
+        pdf = pdfkit.from_string(html, False)
+        st.balloons()          
+        if ( str(df["Status"][tindex]) == "Pass" ):
+            st.balloons()  
+            st.success("You have cleared the exam!")
+        else:
+            st.error("You haven't cleared the exam!")
       
         
         
         # generate html with base64 encoded string of image
-        html_string = jinja_template.render(
-            img_string=image_file_path_to_base64_string('ljulogo.png'))
+        # html_string = jinja_template.render(
+            # img_string=image_file_path_to_base64_string('ljulogo.png'))
 
         # generate pdf
-        pdf = pdfkit.from_string(html_string, 'html.pdf')
+        # pdf = pdfkit.from_string(html_string, 'html.pdf')
         
         
         
