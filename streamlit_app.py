@@ -49,18 +49,20 @@ for i in range(len(df["EnrolmentNo"])):
 st.image('ljulogo.png', use_column_width=True)
 st.markdown("<h1 style='text-align: center'><b>Semester Exam Report</b></h1>", unsafe_allow_html=True)
 
+
 # textInput = st.text_input("Enter your Enrolment No").lower()
 textInput = st.text_input("Enter your Enrolment No")
 
 #Input Activity
 status = False
 for i in df["EnrolmentNo"]:
-    if( i == str(textInput) ):
+    if( i == textInput):
         status = True
 if(textInput != "" and status):
     tindex = df[df["EnrolmentNo"] == textInput].index[0] #Finding the index of the search EnrolmentNo
     st.header("Welcome " + str(df["StudentName"][tindex]).title() +" !")            
     st.markdown("<style>#lju {border-collapse: collapse;  width: 100%;}</style>", unsafe_allow_html=True)
+    st.markdown( type(textInput) )
     
     if ( str(df["Status"][tindex]) == "Pass" ):
         st.balloons()  
