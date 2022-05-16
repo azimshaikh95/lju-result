@@ -145,7 +145,7 @@ if(textInput != "" and status):
             DeclarationDate=str(df["DeclarationDate"][tindex]),              
         )
 
-        pdf = pdfkit.from_string(html, False)
+        # pdf = pdfkit.from_string(html, False)
         # st.balloons()          
         # if ( str(df["Status"][tindex]) == "Pass" ):
             # st.balloons()  
@@ -160,7 +160,7 @@ if(textInput != "" and status):
             img_string=image_file_path_to_base64_string('ljulogo.png'))
 
         # generate pdf
-        pdfkit.from_string(html_string, 'html.pdf')
+        pdf = pdfkit.from_string(html_string, 'html.pdf')
         
         
         
