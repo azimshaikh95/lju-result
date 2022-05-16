@@ -50,12 +50,12 @@ st.image('ljulogo.png', use_column_width=True)
 st.markdown("<h1 style='text-align: center'><b>Semester Exam Report</b></h1>", unsafe_allow_html=True)
 
 # textInput = st.text_input("Enter your Enrolment No").lower()
-str(textInput) = st.text_input("Enter your Enrolment No")
+textInput = st.text_input("Enter your Enrolment No")
 
 #Input Activity
 status = False
 for i in df["EnrolmentNo"]:
-    if( i == textInput):
+    if( i == str(textInput) ):
         status = True
 if(textInput != "" and status):
     tindex = df[df["EnrolmentNo"] == textInput].index[0] #Finding the index of the search EnrolmentNo
