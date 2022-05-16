@@ -41,6 +41,12 @@ owners = st.container()
 data = pd.read_csv("data/" + datex + ".csv",encoding='utf-8')
 df = pd.DataFrame(data)
 
+hide_menu_style = """
+        <style>
+        #MainMenu {visibility: hidden;}
+        </style>
+        """
+st.markdown(hide_menu_style, unsafe_allow_html=True)
 
 for i in range(len(df["EnrolmentNo"])):
     df['EnrolmentNo'][i] = df['EnrolmentNo'][i].lower()
