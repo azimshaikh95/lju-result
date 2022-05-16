@@ -55,7 +55,6 @@ textInput = st.text_input("Enter your Enrolment No").lower()
 
 #Input Activity
 status = False
-st.header( type(textInput) )
 for i in df["EnrolmentNo"]:
     if( i == textInput):
         status = True        
