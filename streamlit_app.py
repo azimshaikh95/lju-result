@@ -43,7 +43,7 @@ df = pd.DataFrame(data)
 
 
 for i in range(len(df["EnrolmentNo"])):
-    df['EnrolmentNo'][i] = df['EnrolmentNo'][i].lower()
+    # df['EnrolmentNo'][i] = df['EnrolmentNo'][i].lower()
     # df['EnrolmentNo'][i] = df['EnrolmentNo'][i]
     
 st.image('ljulogo.png', use_column_width=True)
