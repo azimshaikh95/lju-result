@@ -54,6 +54,7 @@ st.markdown("<h1 style='text-align: center'><b>Semester Exam Report</b></h1>", u
 textInput = st.text_input("Enter your Enrolment No")
 
 #Input Activity
+st.markdown( type(textInput) )
 status = False
 for i in df["EnrolmentNo"]:
     if( i == textInput):
@@ -62,7 +63,7 @@ if(textInput != "" and status):
     tindex = df[df["EnrolmentNo"] == textInput].index[0] #Finding the index of the search EnrolmentNo
     st.header("Welcome " + str(df["StudentName"][tindex]).title() +" !")            
     st.markdown("<style>#lju {border-collapse: collapse;  width: 100%;}</style>", unsafe_allow_html=True)
-    st.markdown( type(textInput) )
+    
     
     if ( str(df["Status"][tindex]) == "Pass" ):
         st.balloons()  
