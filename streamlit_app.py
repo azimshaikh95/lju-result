@@ -58,6 +58,7 @@ status = False
 for i in df["EnrolmentNo"]:
     if( i == textInput):
         status = True
+        st.header( type(textInput) )
 if(textInput != "" and status):
     tindex = df[df["EnrolmentNo"] == textInput].index[0] #Finding the index of the search EnrolmentNo
     st.header("Welcome " + str(df["StudentName"][tindex]).title() +" !")            
