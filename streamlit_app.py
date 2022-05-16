@@ -80,7 +80,8 @@ if(textInput != "" and status):
     
     
     # env = Environment(loader=FileSystemLoader("."), autoescape=select_autoescape())
-    template = env.get_template("template.html")
+    # template = env.get_template("template.html")
+    template = get_template("template.html")
 
     left.info("Want to Save?")
     submit = left.button("📝 Generate PDF")
