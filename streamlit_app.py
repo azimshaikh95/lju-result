@@ -43,13 +43,14 @@ df = pd.DataFrame(data)
 
 
 for i in range(len(df["EnrolmentNo"])):
-    df['EnrolmentNo'][i] = df['EnrolmentNo'][i].lower()
-
-
+    # df['EnrolmentNo'][i] = df['EnrolmentNo'][i].lower()
+    df['EnrolmentNo'][i] = df['EnrolmentNo'][i]
+    
 st.image('ljulogo.png', use_column_width=True)
 st.markdown("<h1 style='text-align: center'><b>Semester Exam Report</b></h1>", unsafe_allow_html=True)
 
-textInput = st.text_input("Enter your Enrolment No").lower()
+# textInput = st.text_input("Enter your Enrolment No").lower()
+textInput = st.text_input("Enter your Enrolment No")
 
 #Input Activity
 status = False
