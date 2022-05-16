@@ -143,7 +143,7 @@ if(textInput != "" and status):
             CurrentBacklog=str(df["CurrentBacklog"][tindex]),
             TotalBacklog=str(df["TotalBacklog"][tindex]),
             DeclarationDate=str(df["DeclarationDate"][tindex]),
-            image_file_path_to_base64_string('ljulogo.png'),
+            img_string('ljulogo.png'),
         )
 
         pdf = pdfkit.from_string(html, False)
