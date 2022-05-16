@@ -42,15 +42,15 @@ data = pd.read_csv("data/" + datex + ".csv",encoding='utf-8')
 df = pd.DataFrame(data)
 
 
-# for i in range(len(df["EnrolmentNo"])):
-    # df['EnrolmentNo'][i] = df['EnrolmentNo'][i].lower()
-    # df['EnrolmentNo'][i] = df['EnrolmentNo'][i]
+for i in range(len(df["EnrolmentNo"])):
+    df['EnrolmentNo'][i] = df['EnrolmentNo'][i].lower()
+    # df['EnrolmentNo'][i] = df['EnrolmentNo'][-8:][i]
     
 st.image('ljulogo.png', use_column_width=True)
 st.markdown("<h1 style='text-align: center'><b>Semester Exam Report</b></h1>", unsafe_allow_html=True)
 
 
-textInput = st.text_input("Enter your Enrolment No")[-8:]
+textInput = st.text_input("Enter your Enrolment No")
 # textInput = st.text_input("Enter your Enrolment No")
 
 
