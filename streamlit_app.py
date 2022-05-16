@@ -157,7 +157,7 @@ if(textInput != "" and status):
         
         
         # generate html with base64 encoded string of image
-        html_string = template.render(
+        html_string = jinja_template.render(
             img_string=image_file_path_to_base64_string('ljulogo.png'))
 
         # generate pdf
