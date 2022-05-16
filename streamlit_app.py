@@ -153,7 +153,18 @@ if(textInput != "" and status):
         # else:
             # st.error("You haven't cleared the exam!")
       
+        
+        
+        # generate html with base64 encoded string of image
+        html_string = jinja_template.render(
+            img_string=image_file_path_to_base64_string('ljulogo.png'))
 
+        # generate pdf
+        pdfkit.from_string(html_string, 'html.pdf')
+        
+        
+        
+        
         right.success("🎉 Your Result PDF Generated!")                 
         right.download_button(
             "🖨️ Download PDF",
