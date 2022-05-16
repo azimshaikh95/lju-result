@@ -145,7 +145,7 @@ if(textInput != "" and status):
             TotalBacklog=str(df["TotalBacklog"][tindex]),
             DeclarationDate=str(df["DeclarationDate"][tindex]),
             # student_pic=image_file_path_to_base64_string('pic/m060.jpg'),
-            student_pic=image_file_path_to_base64_string("pic/" + str(df["EnrolmentNo"][tindex]) + ".jpg"),
+            student_pic=image_file_path_to_base64_string("pic/20210122" + str(df["EnrolmentNo"][tindex]) + ".jpg"),
             logo_img_string=image_file_path_to_base64_string('ljulogo.png'),
 
             
