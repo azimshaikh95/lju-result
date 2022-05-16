@@ -80,8 +80,7 @@ if(textInput != "" and status):
     
     
     env = Environment(loader=FileSystemLoader("."), autoescape=select_autoescape())
-    # template = env.get_template("template.html")
-    template = env.get_template("temp.html")
+    template = env.get_template("template.html")
 
     left.info("Want to Save?")
     submit = left.button("📝 Generate PDF")
@@ -144,7 +143,7 @@ if(textInput != "" and status):
             CurrentBacklog=str(df["CurrentBacklog"][tindex]),
             TotalBacklog=str(df["TotalBacklog"][tindex]),
             DeclarationDate=str(df["DeclarationDate"][tindex]),
-            image_file_path_to_base64_string("ljulogo.png"),
+            image_file_path_to_base64_string('ljulogo.png'),
         )
 
         pdf = pdfkit.from_string(html, False)
@@ -155,15 +154,6 @@ if(textInput != "" and status):
         else:
             st.error("You haven't cleared the exam!")
       
-        
-        
-        # generate html with base64 encoded string of image
-        # html_string = jinja_template.render(
-            # img_string=image_file_path_to_base64_string('ljulogo.png'))
-
-        # generate pdf
-        # pdf = pdfkit.from_string(html_string, 'html.pdf')
-        
         
         
         
