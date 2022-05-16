@@ -52,6 +52,7 @@ st.markdown("<h1 style='text-align: center'><b>Semester Exam Report</b></h1>", u
 
 # textInput = st.number_input("Enter your Enrolment No").lower()
 textInput = st.text_input("Enter your Enrolment No")
+textInput = int ( textInput )
 
 #Input Activity
 status = False
