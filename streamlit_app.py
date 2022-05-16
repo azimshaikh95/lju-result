@@ -132,11 +132,11 @@ if(textInput != "" and status):
 
         pdf = pdfkit.from_string(html, False)
         st.balloons()          
-        if ( str(df["Status"][tindex]) == "Pass" ):
-            st.balloons()  
-            st.success("You have cleared the exam!")
-        else:
-            st.error("You haven't cleared the exam!")
+        # if ( str(df["Status"][tindex]) == "Pass" ):
+            # st.balloons()  
+            # st.success("You have cleared the exam!")
+        # else:
+            # st.error("You haven't cleared the exam!")
       
         
         
