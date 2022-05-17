@@ -38,6 +38,13 @@ table.center {
   margin-right: auto;
 }
 
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%
+}
+
 
 
 #sign {
@@ -63,7 +70,7 @@ table.center {
 </head>
 <body>
 
-<table id=lju class=center>
+<table id=sign class=center>
 	<tbody>
 		
 		<tr>
@@ -88,7 +95,7 @@ table.center {
 		<tr>
 			<th>Institute &amp; Name:</th>
 			<td>{{ InstituteCode }}</td>
-			<td rowspan=7><img src="data:image/png;base64,{{ student_pic }}" width="100px"></td>
+			<td rowspan=7><img src="data:image/png;base64,{{ student_pic }}" width="100px" class=center></td>
 		</tr>
 		<tr>
 			<th>Exam Name:</th>
