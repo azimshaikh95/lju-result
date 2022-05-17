@@ -52,7 +52,7 @@ for i in range(len(df["EnrolmentNo"])):
     df['EnrolmentNo'][i] = df['EnrolmentNo'][i].lower()
     # df['EnrolmentNo'][i] = df['EnrolmentNo'][i]
     
-st.image('ljulogo.png', use_column_width=True)
+st.image('images/ljulogo.png', use_column_width=True)
 st.markdown("<h1 style='text-align: center'><b>Exam Hallticket Generator</b></h1>", unsafe_allow_html=True)
 
 
@@ -125,13 +125,15 @@ if(textInput != "" and status):
             Time5=str(df["Time5"][tindex]),
             Time6=str(df["Time6"][tindex]),
             student_pic=image_file_path_to_base64_string("pic/2021012250610" + str(df["EnrolmentNo"][tindex][-3:]) + ".jpg"),
-            logo_img_string=image_file_path_to_base64_string('ljulogo.png'),
+            logo_img_string=image_file_path_to_base64_string('images/ljulogo.png'),
+            stamp_img_string=image_file_path_to_base64_string('images/stamp.png'),
+            sign_img_string=image_file_path_to_base64_string('images/sign.png'),
 
             
         )
 
         pdf = pdfkit.from_string(html, False)
-        st.balloons()          
+        # st.balloons()          
         # if ( str(df["Status"][tindex]) == "Pass" ):
             # st.balloons()  
             # st.success("You have cleared the exam!")
