@@ -126,7 +126,7 @@ if(textInput != "" and status):
             Time6=str(df["Time6"][tindex]),
             student_pic=image_file_path_to_base64_string("pic/2021012250610" + str(df["EnrolmentNo"][tindex][-3:]) + ".jpg"),
             logo_img_string=image_file_path_to_base64_string('images/ljulogo.png'),
-            Stamp_img_string=image_file_path_to_base64_string('images/stamp.png'),
+            stamp_img_string=image_file_path_to_base64_string('images/stamp.png'),
             sign_img_string=image_file_path_to_base64_string('images/sign.png'),
 
             
