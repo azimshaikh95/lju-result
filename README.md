@@ -1,7 +1,6 @@
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/azimshaikh95/lju-result/)
 
-# 🎓 Diploma PDF Generator
+# 🎓 LJU Result Generator
 
-A Streamlit app to show how you can easily use Streamlit to generate PDFs.
+A Web App To Generate Result PDFs.
 
-<img width="640" alt="screenshot" src="https://user-images.githubusercontent.com/7164864/141756801-172f3829-788b-4907-806f-f183c34090ad.png">

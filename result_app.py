@@ -41,17 +41,24 @@ owners = st.container()
 data = pd.read_csv("data/" + datex + ".csv",encoding='utf-8')
 df = pd.DataFrame(data)
 
+hide_menu_style = """
+        <style>
+        #MainMenu {visibility: hidden;}
+        </style>
+        """
+st.markdown(hide_menu_style, unsafe_allow_html=True)
 
-# for i in range(len(df["EnrolmentNo"])):
-    # df['EnrolmentNo'][i] = df['EnrolmentNo'][i].lower()
+for i in range(len(df["EnrolmentNo"])):
+    df['EnrolmentNo'][i] = df['EnrolmentNo'][i].lower()
     # df['EnrolmentNo'][i] = df['EnrolmentNo'][i]
     
-st.image('ljulogo.png', use_column_width=True)
+st.image('images/ljulogo.png', use_column_width=True)
 st.markdown("<h1 style='text-align: center'><b>Semester Exam Report</b></h1>", unsafe_allow_html=True)
 
 
 textInput = st.text_input("Enter your Enrolment No").lower()
 # textInput = st.text_input("Enter your Enrolment No")
+
 
 #Input Activity
 status = False
@@ -83,7 +90,7 @@ if(textInput != "" and status):
     
     
     env = Environment(loader=FileSystemLoader("."), autoescape=select_autoescape())
-    template = env.get_template("template.html")
+    template = env.get_template("result_template.html")
 
     left.info("Want to Save?")
     submit = left.button("📝 Generate PDF")
@@ -147,8 +154,8 @@ if(textInput != "" and status):
             TotalBacklog=str(df["TotalBacklog"][tindex]),
             DeclarationDate=str(df["DeclarationDate"][tindex]),
             # student_pic=image_file_path_to_base64_string('pic/m060.jpg'),
-            student_pic=image_file_path_to_base64_string("pic/20210122" + str(df["EnrolmentNo"][tindex]) + ".jpg"),
-            logo_img_string=image_file_path_to_base64_string('ljulogo.png'),
+            student_pic=image_file_path_to_base64_string("pic/2021012250610" + str(df["EnrolmentNo"][tindex][-3:]) + ".jpg"),
+            logo_img_string=image_file_path_to_base64_string('images/ljulogo.png'),
 
             
         )
